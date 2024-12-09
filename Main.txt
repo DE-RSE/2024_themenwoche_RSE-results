@@ -1,0 +1,166 @@
+# Code for Science: Bessere Forschung durch bessere Forschungssoftwarekompetenzen
+<!-- ggf. besser Titel ist notwendig ?-->
+
+https://doi.org/10.5281/zenodo.14273366 (löst noch nicht auf!)
+
+## Autor_innen
+
+### TIER 1
+<!-- hier alle Tier1 alphabetisch eintragen ?-->
+
+### TIER 2
+<!-- hier alle Tier2 alphabetisch eintragen ?-->
+
+## Einführung
+<!--vielleicht dieses Paper als sprachlicher Aufhänger? https://www.nature.com/articles/s43588-024-00651-2 ?-->
+Die Bedeutung von Forschungssoftware<!-- Hinweis zur verwendeten Definition von Forschungssoftware, https://arxiv.org/abs/2404.14364 ?--> im wissenschaftlichen Erkenntnisprozess nimmt zu. Der Umgang mit Forschungssoftware erfordert jedoch entsprechende Kompetenzen, die oft vernachlässigt werden. Institutionen haben oft kein klares Konzept bezüglich der Entwicklung und Nutzung von Forschungssoftware, sowie der Entwicklung entsprechender Kompetenzen. Diese Problemlage wurde in einem Workshop mit Unterstützung der Volkwagen-Stiftung im Dezember 2024 adressiert. Dort wurden **XXXXXXXX** Handlungsempfehlungen zu besseren Forschungssoftwarekompetenzen an deutschen Wissenschaftsinstitutionen entwickelt.
+
+* Erwähnung deRSE Positionspapier 1[^2]
+    * Aufschlag und Gründung deRSE 2019/20
+* Erwähnung deRSE Positionspapier 2[^10]
+
+## Workshop-Konzeption
+Der Workshop fand am 2. bis 4. Dezember 2024 unter dem Titel "Code for Science oder: Bessere Forschung durch bessere Forschungssoftwarekompetenzen" im Schloss Herrenhausen Hannover statt. Die Veranstaltung wurde gefördert durch die Volkswagen-Stiftung im Rahmen der „Themenwoche Digitale Kompetenzen in der Wissenschaft“ 2024.[^3] Die Intension der Volkswagen-Stiftung hierfür war es dazu beitragen, dass neue Konzepte zu digitalen Kompetenzen in der Wissenschaft sichtbarer werden.
+
+Für die Themenwoche fand Mitte 2024 eine offene Ausschreibung statt. Hieraus wurden vier parallele Workshops zu unterschiedlichen Facetten gefördert. Themenschwerpunkte neben Forschungssoftware waren Kompetenzen im Forschungsdatenmanagement, Verbindungen von Forschungsdaten und -software sowie Forschungsdatenmanagement an Hochschulen für angewandte Wissenschaften.[^18] Jeder Workshop bestand aus ungefähr 35 Personen.
+
+Der Antragstext für den Workshop zu beseren Kompetenzen bei Forschungssoftware ist offen publiziert.[^9] Das zentrale Ergebnis des Workshops war es Empfehlungen zu erstellen, auf welche Art und Weise die verschiedenen Akteure und ihre Institutionen befähigt werden können, mit Forschungssoftware und insbesondere entsprechender Kompetenzgewinnung bewusster umgehen können. Die Initative für den Workshop entstand im Kontext der deRSE-Community durch einen internen Aufruf und Austausch, aus dem sich ein Organisationsteam zusammengefunden hatte.
+
+Aufbau Textdokument
+* Status quo
+    * D
+    * Verschiedene Perspektiven
+* Handlungsempfehlungen
+
+
+## Der status quo zu Forschungssoftware und Kompetenzen in Deutschland
+Forschungssoftware nimmt im wissenschaftlichen Erkenntnisprozess eine zunehmende Bedeutung ein. Diese Entwicklung eröffnet vielen Forschungsfeldern neue Möglichkeiten, benötigt jedoch auch die entsprechenden Kompetenzen. Trotzdem wird Forschungssoftware und insbesondere der entsprechende Kompetenzaufbau häufig von wissenschaftlichen Einrichtungen nicht im notwendigen Umfang adressiert. Nicht selten gibt es keine Übersicht, wer innerhalb einer Institution Forschungssoftware entwickelt, betreibt und erhält. Synergien und Kommunikationswege entstehen dabei selten oder meist zufällig. Ähnlich ist es um Kompetenzentwicklung in diesem Bereich bestellt. Während lokal einige Fachbereiche durchaus erfolgreiche Anstrengungen unternehmen, wird von der breiten Masse der Studierenden und damit der zukünftigen Forschenden erwartet, sich diese Kompetenzen selbstständig in der Freizeit anzueignen und das oft ohne nützliche Hinweise, was genau eigentlich später gebraucht wird.
+
+Diese Sitatution findet vor einer sich dynamisierenden Entwicklung rund um die Handhabung von Forschungssoftware in Deutschland, Europa und der Welt statt. Mit der jüngsten DFG-Handreichung zu Forschungssoftware vom Oktober 2024[^8] wurde beispielsweise auf nationaler Ebene
+
+* Fragen wie sich Forschungssoftware dauerhaft und effizient gestalten[^11] lässt
+* Überleitung: Was bedeutet das aber im Alltag?  Gibt es im deutschen Kontexte Ansätze wie etwa in den Vereingten Staat um Software Engineering-Praktiken im akademischen All zu verwirklichen?[^1]
+
+### Perspektive von Bibliotheken
+* Folien Mustafa[^16]
+
+### Perspektive von Rechenzentren
+* Folien Philipp
+* SSC@Heidelberg White Paper[^4]
+
+### Perspektive von Open Science Offices
+* Folie Heidi[^13]
+
+### Perspektive von Forschungsförderern
+* Umfrage zu Fördergebern bezüglich Forschungssoftware[^6]
+* Science Europe Empfehlungen Forschunssoftware-Policies [^7]
+* Amsterdam Declaration on Funding Research Software Sustainability[^5]
+
+### Perspektive von Einrichtungen des Höchstleistungsrechnen
+* Folien Sarah[^15]
+
+### Perspektive von Forschungsdatenmanagements
+* Folien Cora[^17]
+
+### Perspektive von inner- und überinstitutioneller Weiterbildung
+* Folien Lorenzo[^14]
+
+## Zehn Handlungsempfehlungen zu besseren Forschungssoftwarekompetenzen an deutschen Wissenschaftsinstitutionen
+
+<!-- Ergebnisse der Karo-Gruppe 
+* https://pad.gwdg.de/s/YWYeMoouJ
+?-->
+
+**Einleitung**
+Die zunehmende Bedeutung von Forschungssoftware in der Wissenschaft erfordert nicht nur technische Expertise, sondern auch gezielte Strategien für den Aufbau von Kompetenzen und Netzwerken. Der Schlüssel zu nachhaltigem Kompetenzaufbau liegt darin, eine lebendige Community zu schaffen, die den Wissensaustausch fördert und Forschende auf allen Ebenen einbindet. Im Folgenden geben wir spezifische Handlungsempfehlungen, wie durch Multiplikator\*innen, niedrigschwellige Einstiegsangebote und fortgeschrittene Entwicklungsprogramme eine starke Community aufgebaut werden kann.
+
+**Multiplikator\*innen als Ankerpunkt der Community**
+Multiplikator\*innen sind unverzichtbar, um das Thema Forschungssoftware in den wissenschaftlichen Alltag zu integrieren und den Austausch innerhalb und zwischen Institutionen zu fördern. Einrichtungen wie Universitäten, Forschungseinrichtungen und Arbeitsgruppen sollten gezielt Personen oder Teams benennen, die als zentrale Ansprechstelle fungieren. Diese Multiplikator\*innen können Einzelpersonen sein, aber auch Gremien oder spezialisierte Arbeitsgruppen. Idealerweise füllen Champions die Rolle der Multiplikator\*innen aus, die sich intrinsisch motiviert im Thema engagieren und kommunikationsstark sind.
+Ihre Hauptaufgabe besteht darin, Forschende miteinander zu vernetzen – nicht nur innerhalb eines Instituts, sondern auch über disziplinäre und institutionelle Grenzen hinweg. Sie stärken die Sichtbarkeit von Forschungssoftwarethemen, verbreiten Best Practices und fördern die interdisziplinäre Zusammenarbeit. Multiplikator\*innen müssen dabei keine technischen Expert\*innen sein, sollten jedoch ein grundlegendes Verständnis für die Herausforderungen der Softwareentwicklung und Bedürfnisse der Forschenden mitbringen. Ihre Fähigkeit, klar zu kommunizieren und als Knotenpunkt eines Netzwerks zu agieren, ist entscheidend für den Erfolg ihrer Rolle.
+Indem Multiplikator\*innen nicht nur das Wissen innerhalb der Community verbreiten, sondern auch Impulse von außen aufnehmen, tragen sie aktiv dazu bei, die Community weiterzuentwickeln und nachhaltig auszubauen. 
+
+**Niedrigschwellige Einstiegsangebote: Der Weg zur Community**
+Um Forschende für die Community zu gewinnen, ist es essenziell, Hürden beim Einstieg zu minimieren. Viele Forschende haben Berührungsängste mit Themen wie Softwareentwicklung oder betrachten sich nicht als Teil der Forschungssoftware-Community. Institutionen können hier ansetzen, indem sie Einsteiger\*innen direkt zu Beginn, beispielsweise ihres ersten Codingprojektes innerhalb der Forschung, explizit ansprechen und personalisierte Unterstützung anbieten.
+Mögliche Wege dorthin beginnen mit der Bereitstellung klar definierter Einstiegspunkte. Persönlicher Kontakt durch benannte Ansprechpersonen oder Mentoring-Programme kann den Einstieg erleichtern. Zusätzlich bieten digitale Tools wie Wikis, Online-Foren oder Chatkanäle flexible Möglichkeiten für Selbststudium und Austausch. Praktische Formate wie Hackathons, Advent of Code oder Code Katas machen den Lernprozess interaktiv und fördern den direkten Kontakt mit der Community.
+Je zugänglicher der Einstieg gestaltet wird, desto mehr Forschende fühlen sich ermutigt, Teil dieser Gemeinschaft zu werden und ihr Wissen aktiv einzubringen.
+
+**Fortgeschrittene Angebote: Kompetenzen nachhaltig stärken**
+Neben dem Einstieg spielt die Weiterentwicklung bestehender Kompetenzen eine zentrale Rolle für den langfristigen Erfolg der Community. Forschende, die erste Erfahrungen gesammelt haben, benötigen Gelegenheiten, ihre Fähigkeiten in einem größeren Kontext anzuwenden und zu vertiefen. Dies ist besonders wichtig in der Phase nach den ersten Codingerfahrungen, in der Einsteigerwissen nicht mehr ausreicht, um domänenspezifische Codingprojekte weiterzuentwickeln („Tal der Verzweiflung“ nach dem Dunning-Kruger-Effekt).
+Fortgeschrittene Formate wie „Bring your own code“-Hackathons ermöglichen es, konkrete Projekte mit Unterstützung von Expert\*innen weiterzuentwickeln. Schulungen mit direktem Bezug zur eigenen Forschungsdomäne helfen, die Brücke zwischen Theorie und Praxis zu schlagen. Gleichzeitig sollten Forschende ermutigt werden, sich aktiv in die Community einzubringen, etwa durch Peer-Coding, Mentoring oder die Moderation von Diskussionsforen.
+Ein wichtiger Aspekt ist das Erwartungsmanagement: Grenzen der Begleitung sollten möglichst frühzeitig definiert und kommuniziert werden. Auf diese Weise lassen sich realistische Ziele setzen und Enttäuschungen vermeiden. Der Fokus sollte darauf liegen, Forschende zu befähigen, selbstständig zu agieren und ihre Erkenntnisse in die eigene Forschungsumgebung zu transferieren.
+
+![](https://pad.gwdg.de/uploads/93dc5b19-fc0b-41a1-b33f-64d4f6cc1272.png)
+
+**Fazit: Eine starke Community als Schlüssel zum Erfolg**
+Der Aufbau von Forschungssoftwarekompetenzen ist mehr als die Vermittlung technischer Fähigkeiten. Entscheidend ist die Schaffung einer aktiven, inklusiven Community, die den Austausch zwischen Forschenden untereinander und Softwareexpert\*innen fördert. Multiplikator\*innen sind hierbei der Dreh- und Angelpunkt, da sie den Wissenstransfer koordinieren und Netzwerke etablieren. Niedrigschwellige Einstiegsangebote senken Barrieren und motivieren Forschende, sich in die Community einzubringen, während fortgeschrittene Programme den Transfer in die eigene Domäne und die nachhaltige Kompetenzentwicklung unterstützen.
+
+**Glossar**
+**Multiplikator\*in:**
+Eine zentrale Ansprechperson oder ein Gremium, das den Wissensaustausch innerhalb einer Institution oder Community koordiniert. Multiplikator\*innen vernetzen Forschende, verbreiten Best Practices und fördern interdisziplinäre Zusammenarbeit, ohne zwingend selbst technische Expertinnen sein zu müssen.
+
+**Champion:**
+Eine Person, die Expert\*in in ihrem Fachgebiet ist und sich durch außergewöhnliche intrinsische Motivation sowie starkes Engagement auszeichnet. Champions treiben Innovationen voran, teilen ihr Wissen aktiv und übernehmen oft eine Vorbildrolle in der Community.
+
+**Community-Building:**
+Der systematische Aufbau und die Pflege einer Gemeinschaft, in der Mitglieder ihr Wissen, ihre Erfahrungen und Ressourcen teilen, um gemeinsame Ziele zu erreichen. Im Kontext von Forschungssoftware steht Community-Building für die Förderung von Zusammenarbeit und den Aufbau von Netzwerken zwischen Forschenden und Softwareexpert\*innen.
+
+**Hackathon:**
+Eine zeitlich begrenzte Veranstaltung, bei der Teilnehmende zusammenkommen, um an spezifischen Projekten oder Problemen zu arbeiten. Ziel ist es, in kurzer Zeit innovative Lösungen zu entwickeln.
+
+**Advent of Code:**
+Ein jährlich stattfindendes Programmier-Event, bei dem Teilnehmende in der Adventszeit täglich neue algorithmische Herausforderungen lösen können. Es wird oft als praxisnahes Training für Programmierfähigkeiten genutzt.
+
+**Code Kata:**
+Eine Übungsmethode aus der Softwareentwicklung, bei der Entwickelnde wiederholt kleinere Programmieraufgaben lösen, um ihre Fähigkeiten zu verbessern und neue Techniken zu erlernen.
+
+**Train Tracks:**
+Begleitende Lernpfade oder Workshops, die parallel zu anderen Formaten wie Hackathons stattfinden. Sie bieten gezielte Schulungen und Unterstützung zu spezifischen Themen oder Technologien.
+
+**Bring your own code (BYOC):**
+Ein Konzept, bei dem Forschende ihre eigenen Softwareprojekte zu Veranstaltungen wie Hackathons oder Workshops mitbringen. Dort erhalten sie Unterstützung von Expert\*innen, um ihre Projekte weiterzuentwickeln oder zu optimieren.
+Peer-Coding:
+Ein kollaborativer Ansatz, bei dem zwei oder mehr Personen gemeinsam an einem Programm arbeiten, um voneinander zu lernen, Fehler zu reduzieren und kreative Lösungen zu entwickeln.
+
+**Product Owner:**
+Eine Rolle aus der agilen Softwareentwicklung, die für die Definition von Anforderungen und die Priorisierung von Aufgaben verantwortlich ist. Im Kontext von Forschungssoftware beschreibt dies eine Person mit tiefem Verständnis für die Bedürfnisse der Nutzenden und die Probleme, die gelöst werden sollen.
+
+**Single Point of Contact (SPOC):**
+Eine zentrale Anlaufstelle innerhalb einer Organisation oder Community, die Fragen koordiniert und als Bindeglied zwischen verschiedenen Akteurinnen fungiert. Multiplikatorinnen übernehmen häufig diese Funktion.
+
+---
+
+<!-- Ergebnisse der Herz-Gruppe 
+* https://pad.gwdg.de/s/ZXmW8iXm2
+?-->
+
+## Zusammenfassung
+
+## Ausblick
+* Menschen im Zentrum https://researchsoft.org/blog/2023-10/
+* mit Zukunftsvision 2030 abgleichen[^12]
+
+<!-- to dos
+* Literaturangaben ausschreiben
+* alle Autor_innen korrekt zitieren
+* md via Pandas in Latex migrieren
+* VW-Stiftung nach Publikation informieren
+?-->
+
+[^1]: https://hdsr.mitpress.mit.edu/pub/f0f7h5cu
+[^2]: https://doi.org/10.12688/f1000research.23224.2
+[^3]: https://www.volkswagenstiftung.de/de/foerderung/foerderangebot/themenwoche-digitale-kompetenzen-der-wissenschaft-beendet
+[^4]: https://zenodo.org/doi/10.5281/zenodo.10867903
+[^5]: https://doi.org/10.5281/zenodo.7740084
+[^6]: https://doi.org/10.12688/f1000research.155879.1
+[^7]: https://zenodo.org/doi/10.5281/zenodo.13740998
+[^8]: https://zenodo.org/doi/10.5281/zenodo.13919790
+[^9]: https://doi.org/10.5281/zenodo.14265404
+[^10]: http://arxiv.org/abs/2311.11457
+[^11]: L. Grunske, A.- L. Lamprecht, W. Hasselbring, B. Rumpe: Research Software Engineering - Forschungssoftware effizient erstellen und dauerhaft erhalten. In: Forschung & Lehre - Zukunft der Arbeit, Band 24(3), pp. 186-188, Feb. 2024. KEINE DOI!
+[^12]: https://ieeexplore.ieee.org/document/10254813/
+[^13]: https://doi.org/10.5281/zenodo.14266458
+[^14]: https://doi.org/10.5281/zenodo.14273083
+[^15]: https://doi.org/10.5281/zenodo.14273217
+[^16]: https://doi.org/10.5281/zenodo.14273293
+[^17]: https://doi.org/10.5281/zenodo.14287152
+[^18]: Für den Abschlussbericht zum Forschungsdatenmanagement an Hochschulen für angewandte Wissenschaften siehe https://doi.org/10.5281/zenodo.14285460.

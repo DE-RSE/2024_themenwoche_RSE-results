@@ -1,1 +1,2 @@
-# 2024_themenwoche_RSE-results
+# Repository für die Verschriftlichung der Ergebnisse "Code for Science oder: Bessere Forschung durch bessere Forschungssoftwarekompetenzen"
+Aufbauend auf dem Workshop "Code for Science oder: Bessere Forschung durch bessere Forschungssoftwarekompetenzen" [https://doi.org/10.5281/zenodo.14265404](https://doi.org/10.5281/zenodo.14265404) in der Themenwoche der VW-Stiftung Dezember 2024 entsteht eine Textpublikation. Dieses Repository dient für die gemeinsame Arbeit an und Sicherung der Textpublikation.
