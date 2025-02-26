@@ -1,166 +1,596 @@
-# Code for Science: Bessere Forschung durch bessere Forschungssoftwarekompetenzen
-<!-- ggf. besser Titel ist notwendig ?-->
+\documentclass{article}
 
-https://doi.org/10.5281/zenodo.14273366 (löst noch nicht auf!)
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[ngerman]{babel}
+\usepackage[german]{authblk}
+\usepackage{natbib} %add better citation format
 
-## Autor_innen
+\usepackage[
+    type={CC},
+    modifier={by},
+    version={4.0},
+]{doclicense} %add CC BY 4.0 license
 
-### TIER 1
-<!-- hier alle Tier1 alphabetisch eintragen ?-->
+\usepackage{lineno}
+% \linenumbers
+%Nur fürs Review durch Tier 2
+\makeatletter
+\renewcommand\AB@affilsepx{, \protect\Affilfont}
+\makeatother
+\renewcommand{\Affilfont}{\footnotesize} %decreases size of affiliations
 
-### TIER 2
-<!-- hier alle Tier2 alphabetisch eintragen ?-->
+\setlength{\parindent}{0pt} %remove indent at new paragraph
 
-## Einführung
-<!--vielleicht dieses Paper als sprachlicher Aufhänger? https://www.nature.com/articles/s43588-024-00651-2 ?-->
-Die Bedeutung von Forschungssoftware<!-- Hinweis zur verwendeten Definition von Forschungssoftware, https://arxiv.org/abs/2404.14364 ?--> im wissenschaftlichen Erkenntnisprozess nimmt zu. Der Umgang mit Forschungssoftware erfordert jedoch entsprechende Kompetenzen, die oft vernachlässigt werden. Institutionen haben oft kein klares Konzept bezüglich der Entwicklung und Nutzung von Forschungssoftware, sowie der Entwicklung entsprechender Kompetenzen. Diese Problemlage wurde in einem Workshop mit Unterstützung der Volkwagen-Stiftung im Dezember 2024 adressiert. Dort wurden **XXXXXXXX** Handlungsempfehlungen zu besseren Forschungssoftwarekompetenzen an deutschen Wissenschaftsinstitutionen entwickelt.
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
-* Erwähnung deRSE Positionspapier 1[^2]
-    * Aufschlag und Gründung deRSE 2019/20
-* Erwähnung deRSE Positionspapier 2[^10]
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{orcidlink}
 
-## Workshop-Konzeption
-Der Workshop fand am 2. bis 4. Dezember 2024 unter dem Titel "Code for Science oder: Bessere Forschung durch bessere Forschungssoftwarekompetenzen" im Schloss Herrenhausen Hannover statt. Die Veranstaltung wurde gefördert durch die Volkswagen-Stiftung im Rahmen der „Themenwoche Digitale Kompetenzen in der Wissenschaft“ 2024.[^3] Die Intension der Volkswagen-Stiftung hierfür war es dazu beitragen, dass neue Konzepte zu digitalen Kompetenzen in der Wissenschaft sichtbarer werden.
+\title{Code for Science: Bessere Forschung durch bessere Forschungssoftwarekompetenzen}
+\author[1]{Simon Christ \orcidlink{0000-0002-5866-1472}}
+\affil[1]{Leibniz Universität Hannover}
+\author[2]{Bernadette Fritzsch \orcidlink{0000-0002-0690-7151}}
+\affil[2]{Alfred-Wegener-Institut, Helmholtzzentrum für Polar- und Meeresforschung Bremerhaven}
+\author[3]{Yves Vincent Grossmann \orcidlink{0000-0002-2880-8947}}
+\affil[3]{Universität Frankfurt}
+\author[4]{Dominic Kempf \orcidlink{0000-0002-6140-2332}}
+\affil[4]{Scientific Software Center, Universität Heidelberg}
+\author[5]{Jan Linxweiler \orcidlink{0000-0002-2755-5087}}
+\affil[5]{TU Braunschweig}
+\author[6]{Frank Löffler \orcidlink{0000-0001-6643-6323}}
+\affil[6]{Universität Jena}
+\author[7]{Lydia Riedl \orcidlink{0000-0003-4131-7891}}
+\affil[7]{Universität Marburg}
+\author[8]{Jan Philipp Thiele \orcidlink{0000-0002-8901-6660}}
+\affil[8]{Weierstraß-Institut Berlin}
+\author[9]{Adina S. Wagner \orcidlink{0000-0003-2917-3450}}
+\affil[9]{Forschungszentrum Jülich}
+\author[10]{Lorenzo Zanon \orcidlink{0009-0007-3822-6178}}
+\affil[10]{Höchstleistungsrechenzentrum Stuttgart (HLRS), Universität Stuttgart}
 
-Für die Themenwoche fand Mitte 2024 eine offene Ausschreibung statt. Hieraus wurden vier parallele Workshops zu unterschiedlichen Facetten gefördert. Themenschwerpunkte neben Forschungssoftware waren Kompetenzen im Forschungsdatenmanagement, Verbindungen von Forschungsdaten und -software sowie Forschungsdatenmanagement an Hochschulen für angewandte Wissenschaften.[^18] Jeder Workshop bestand aus ungefähr 35 Personen.
+% Eventuell Credits der Beitragenden nach https://credit.niso.org/ oä. spezifizieren
 
-Der Antragstext für den Workshop zu beseren Kompetenzen bei Forschungssoftware ist offen publiziert.[^9] Das zentrale Ergebnis des Workshops war es Empfehlungen zu erstellen, auf welche Art und Weise die verschiedenen Akteure und ihre Institutionen befähigt werden können, mit Forschungssoftware und insbesondere entsprechender Kompetenzgewinnung bewusster umgehen können. Die Initative für den Workshop entstand im Kontext der deRSE-Community durch einen internen Aufruf und Austausch, aus dem sich ein Organisationsteam zusammengefunden hatte.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ab hier Tier 2 Autoren alphabetisch %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author[11]{Cora Assmann \orcidlink{0000-0001-5072-0661}}
+\affil[11]{Universität Jena}
+\author[12]{Dirk Brömmel \orcidlink{0009-0002-3460-928X}}
+\affil[12]{Jülich Supercomputing Centre, Forschungszentrum Jülich GmbH}
+\author[13]{René Caspart \orcidlink{0000-0002-5502-9412}}
+\affil[13]{Karlsruher Institut für Technologie}
+\author[14]{Mustafa Dogan \orcidlink{0000-0001-9373-8706}}
+\affil[14]{SUB Göttingen}
+\author[15]{Sven Fillinger \orcidlink{0000-0001-8835-2219}}
+\affil[15]{Zentrum für Quantitative Biologie, Universität Tübingen}
+\author[16]{Jasmin Frangenberg \orcidlink{0009-0004-5961-4709}}
+\affil[16]{Leibniz-Institut für Naturstoff-Forschung und Infektionsbiologie}
+\author[17]{Michael Franke \orcidlink{0000-0002-2661-8242}}
+\affil[17]{Max Planck Digital Library}
+\author[18]{Annalena Frey \orcidlink{0009-0008-3284-4693}}
+\affil[18]{Universität Heidelberg}
+\author[19]{Jonas Hagenberg \orcidlink{0000-0002-1849-1106}}
+\affil[19]{Max-Planck-Institut für Psychiatrie}
+\author[20]{Carina Haupt\orcidlink{0000-0001-6447-1379}}
+\affil[20]{Deutsches Zentrum für Luft- und Raumfahrt}
+\author[21]{Volodymyr Kushnarenko \orcidlink{0000-0001-7427-2410}}
+\affil[21]{Höchstleistungsrechenzentrum Stuttgart (HLRS), Universität Stuttgart}
+\author[22]{Sarah Neuwirth \orcidlink{0000-0001-7409-153X}}
+\affil[22]{Universität Mainz}
+\author[23]{Tobias Ribizel \orcidlink{0000-0003-3023-1849}}
+\affil[23]{TU München}
+\author[24]{Jens Saak \orcidlink{0000-0001-5567-9637}}
+\affil[24]{Max Planck Institute for Dynamics of Complex Technical Systems}
+\author[25]{Andreas Schieberle \orcidlink{0000-0001-5389-9409}}
+\affil[25]{Universität Gießen}
+\author[26]{Kristine Schima-Voigt \orcidlink{0009-0008-9792-2111}}
+\affil[26]{SUB Göttingen}
+\author[27]{Peter Schmidt \orcidlink{0009-0002-5602-8101}}  
+\affil[27]{Podcast Code4Thought}
+\author[28]{Heidi Seibold \orcidlink{0000-0002-8960-9642}}
+\affil[28]{Digital Research Academy}
+\author[29]{Robert Speck \orcidlink{0000-0002-3879-1210}}
+\affil[29]{Jülich Supercomputing Centre, Forschungszentrum Jülich GmbH}
+\author[30]{Mathijs Vleugel \orcidlink{0000-0003-2988-2628}}
+\affil[30]{Helmholtz Open Science Office}
+\author[31]{Alexander Wellmann \orcidlink{0000-0002-9033-5538}}
+\affil[31]{Leibniz Supercomputing Center}
+\author[32]{Philipp Wieder \orcidlink{0000-0002-6992-1866}}
+\affil[32]{Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen}
+\author[33]{Samantha Wittke \orcidlink{0000-0002-9625-7235}}
+\affil[33]{CSC-IT Center for Science, Finland, CodeRefinery}
 
-Aufbau Textdokument
-* Status quo
-    * D
-    * Verschiedene Perspektiven
-* Handlungsempfehlungen
 
 
-## Der status quo zu Forschungssoftware und Kompetenzen in Deutschland
-Forschungssoftware nimmt im wissenschaftlichen Erkenntnisprozess eine zunehmende Bedeutung ein. Diese Entwicklung eröffnet vielen Forschungsfeldern neue Möglichkeiten, benötigt jedoch auch die entsprechenden Kompetenzen. Trotzdem wird Forschungssoftware und insbesondere der entsprechende Kompetenzaufbau häufig von wissenschaftlichen Einrichtungen nicht im notwendigen Umfang adressiert. Nicht selten gibt es keine Übersicht, wer innerhalb einer Institution Forschungssoftware entwickelt, betreibt und erhält. Synergien und Kommunikationswege entstehen dabei selten oder meist zufällig. Ähnlich ist es um Kompetenzentwicklung in diesem Bereich bestellt. Während lokal einige Fachbereiche durchaus erfolgreiche Anstrengungen unternehmen, wird von der breiten Masse der Studierenden und damit der zukünftigen Forschenden erwartet, sich diese Kompetenzen selbstständig in der Freizeit anzueignen und das oft ohne nützliche Hinweise, was genau eigentlich später gebraucht wird.
 
-Diese Sitatution findet vor einer sich dynamisierenden Entwicklung rund um die Handhabung von Forschungssoftware in Deutschland, Europa und der Welt statt. Mit der jüngsten DFG-Handreichung zu Forschungssoftware vom Oktober 2024[^8] wurde beispielsweise auf nationaler Ebene
+\begin{document}
+\maketitle
 
-* Fragen wie sich Forschungssoftware dauerhaft und effizient gestalten[^11] lässt
-* Überleitung: Was bedeutet das aber im Alltag?  Gibt es im deutschen Kontexte Ansätze wie etwa in den Vereingten Staat um Software Engineering-Praktiken im akademischen All zu verwirklichen?[^1]
 
-### Perspektive von Bibliotheken
-* Folien Mustafa[^16]
+\begin{abstract}
+Die Bedeutung von Forschungssoftware im wissenschaftlichen Erkenntnisprozess nimmt zu.
+Die Entwicklung und der Umgang mit Forschungssoftware erfordern jedoch Kompetenzen, die derzeit im deutschen Wissenschaftssystem noch nicht in genügendem Maße und in ausreichender Breite vorhanden sind.
+Dieses Problem wurde in einem Workshop mit Unterstützung der Volkswagen-Stiftung adressiert.
+Die Veranstaltung fand im Dezember 2024 statt und entwickelte Handlungsempfehlungen für verschiedene Akteure, 
+die der Förderung von Forschungssoftwarekompetenzen an deutschen Wissenschaftsinstitutionen dienen.
+\end{abstract}
+\vspace{1cm}
+\begin{flushleft}
+Persistenter Identifier: \url{https://doi.org/10.5281/zenodo.14273366}
+\end{flushleft}
+\vspace{0.5cm}
+\doclicenseThis %try by YVG, but not the best solution
 
-### Perspektive von Rechenzentren
-* Folien Philipp
-* SSC@Heidelberg White Paper[^4]
+\newpage
+% \tableofcontents
+\newpage
+\section{Einleitung}
 
-### Perspektive von Open Science Offices
-* Folie Heidi[^13]
+Der zunehmende Einsatz von Forschungssoftware eröffnet in vielen Forschungsfeldern neue Möglichkeiten, erfordert jedoch auch entsprechende Kompetenzen bei Wissenschaftlerinnen und Wissenschaftlern.\footnote{Für die Diskussion der verschiedenen Kategorien und Konzepte zu \glqq{}Forschungssoftware\grqq{}\ siehe beispielsweise \cite{hasselbring2024researchsoftwarecategories}.}
+Trotzdem wird Forschungssoftware und insbesondere der entsprechende Kompetenzaufbau von wissenschaftlichen Einrichtungen nicht immer im notwendigen Umfang adressiert.
+Oft existiert keine Übersicht, wer innerhalb einer Institution Forschungssoftware entwickelt, betreibt und erhält. 
+Synergien und Kommunikationswege entstehen dabei selten oder meist zufällig. 
+Ähnlich ist es um Kompetenzentwicklung in diesem Bereich bestellt. 
+Während beispielsweise lokal einige Fachbereiche durchaus erfolgreiche Anstrengungen unternehmen, 
+wird von der breiten Masse der Studierenden -- und damit der zukünftigen Forschenden -- erwartet, sich diese Kompetenzen selbstständig in der Freizeit anzueignen 
+und dies oft ohne nützliche Hinweise, 
+welche Fähigkeiten eigentlich später gebraucht werden.\\
+Diese Situation findet vor einer zunehmend dynamischen Entwicklung rund um die Handhabung von Forschungssoftware in Deutschland, Europa und der Welt statt. 
+Mit der jüngsten DFG-Handreichung zu Forschungssoftware\footnote{\cite{DFG2024UmgangForschungssoftware}.} vom Oktober 2024 wurde beispielsweise auf nationaler Ebene die Bedeutung von Forschungssoftware aber auch der notwendigen Kompetenzen prominent unterstrichen.\footnote{Siehe hierzu ebenfalls die skizzierten Thesen 3.2 und 3.3 in \cite[8-9]{deutsche_forschungsgemeinschaft_ausschuss_fur_wissenschaftliche_bibliotheken_und_informationssysteme_digitale_2025}.}
+Dies lässt sich in einer bereits laufenden Diskussion zu Forschungssoftware hinsichtlich Dauerhaftigkeit und Effizienz im deutschen Wissenschaftssystem verorten.\\
+Unter dem Titel \glqq{}Code for Science oder: Bessere Forschung durch bessere Forschungssoftwarekompetenzen\grqq{}\ fand daher im Rahmen der \glqq{}Themenwoche Digitale Kompetenzen in der Wissenschaft\grqq{}\ der Volkswagenstiftung vom 2. bis 4.~Dezember 2024 im Schloss Herrenhausen in Hannover ein Workshop mit zahlreichen Vertretern der deutschsprachigen Research Software Engineering (RSEng)
+\footnote{Der folgende Text verwendet die Abkürzung \glqq{}RSE/RSEs\grqq{}\ für \glqq{}Research Software Engineer(s)\grqq{}\, also die Menschen. Für die sprachliche Klarheit wird demgegenüber \glqq{}RSEng\grqq{}\ verwendet, um das \glqq{}Research Software Engineering\grqq{}\, also die Disziplin, zu verdeutlichen.}
+Community statt.\footnote{\cite{volkswagen-stiftung_themenwoche_2024}.}
+Das zentrale Ziel dieser Veranstaltung war Empfehlungen zu erstellen, auf welche Art und Weise die verschiedenen Akteure und ihre Institutionen befähigt werden können, mit Forschungssoftware und entsprechender Kompetenzgewinnung bewusster umzugehen.
+Der Antragstext für den Workshop ist im Vorfeld bereits offen publiziert worden.\footnote{\cite{oeffentlicheDokumenteThemenwoche}.}
+Zusätzlich entstand im Nachgang eine \glqq{}Code for Thought\grqq{}-Podcast-Folge von Peter Schmidt, welcher den Workshop begleitete.\footnote{\cite{schmidt_software_2025}.}\\
+Die erarbeiteten Empfehlungen basieren auf einer Vielzahl an Vorarbeiten, welche in Deutschland insbesondere die deRSE-Community geleistet hat.
+Das deRSE-Positionspapier Nr.~1 dokumentierte im Jahr 2021 den damaligen Stand zum Research Software Engineering\footnote{\cite{Antz2021}.} und verband die Auflistung von offenen Herausforderungen mit dem Appell nach Handlungen.
+Das darauf folgende deRSE-Positionspapier Nr.~2\footnote{\cite{goth_foundational_2024}.} Ende 2023 spezifizierte dann die wesentlichen Kompetenzen und Verantwortungen von Forschungssoftwareentwickler:innen.
+Gedanklich daran anknüpfend verstehen sich die hier präsentierten Handlungsempfehlungen als weiterer Debattenbeitrag zur Diskussion von Forschungssoftware und deren Verankerung in der bundesdeutschen Wissenschaftslandschaft.
 
-### Perspektive von Forschungsförderern
-* Umfrage zu Fördergebern bezüglich Forschungssoftware[^6]
-* Science Europe Empfehlungen Forschunssoftware-Policies [^7]
-* Amsterdam Declaration on Funding Research Software Sustainability[^5]
 
-### Perspektive von Einrichtungen des Höchstleistungsrechnen
-* Folien Sarah[^15]
+\section{Der status quo zu Forschungssoftware und Kompetenzen in Deutschland}
+Für einen Überblick über konkrete Ansätze, wie Software Engineering-Praktiken im akademischen Alltag verwirklicht werden, gab es auf dem Workshop in Hannover sechs Impulse in der Form von Vorträgen, welche das Verhältnis Forschungssoftware und Kompetenzen aus unterschiedlichen Perspektiven beleuchteten.
+Diese Beiträge werden im folgenden Kapitel skizziert, um die eingehenden Debatten aus unterschiedlichen Blickrichtungen verständlich zu gestalten, denn auf ihnen bauten die weiteren Diskussionen Richtung Handlungsempfehlungen maßgeblich auf.
 
-### Perspektive von Forschungsdatenmanagements
-* Folien Cora[^17]
+\subsection{Forschungssoftware in wissenschaftlichen Bibliotheken}
+Bibliotheken stehen im Wandel.  
+Die digitale Transformation verändert die Forschung, Lehre und die Bibliothek selbst.
+Bücher als Datenträger verlieren dabei ihren Exklusivstatus und neue Träger und Formate für Forschungsergebnisse entstehen. 
+In diesem Kontext präsentierte Mustafa Doğan exemplarisch die Staats- und Universitätsbibliothek Göttingen (SUB) und deren RSE-als-Service.
+\footnote{\cite{SlidesMustafa}.} 
+Durch die Zentralisierung von RSEng-Spezialist:innen kann an der SUB eine umfassende Expertise für Forschungssoftware aufgebaut werden. 
+Durch strategische Partnerschaften mit Einrichtungen wie der GWDG kann ein erweitertes Serviceportfolio angeboten 
+und Innovationsförderung im akademischen Kontext betrieben werden. 
+Damit lässt sich eine höhere Effizienz bei der Softwareentwicklung erzielen, 
+was strategische Vorteile bietet. 
+Problemfelder sind aber weiterhin die oft nicht anerkannte Rolle der Forschungssoftware in einer Bibliothek 
+und die schwache Verknüpfung von Forschungssoftwarekompetenzen mit \glqq{}traditionellen\grqq{}\ Bibliotheksaufgaben.
 
-### Perspektive von inner- und überinstitutioneller Weiterbildung
-* Folien Lorenzo[^14]
+\subsection{Perspektiven von Rechenzentren auf Forschungssoftware}
+Ähnlich wie Bibliotheken sind auch Rechenzentren mit neuen Herausforderungen bei der digitalen Transformation konfrontiert. 
+Philipp Wieder von der Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen (GWDG) präsentiert hierzu seine Perspektiven auf diese Entwicklungen.
+\footnote{\cite{SlidesPhilipp}.} 
+Dabei arbeitete er heraus, dass für Software, die von einem Rechenzentrum angeboten und unterstützt wird, teilweise eine Vielzahl von Regelungen, Verordnungen, Normen etc. gelten, welche für diverse Zertifizierungen zu beachten sind.  
+Diese Anforderungen werden bei der Eigenentwicklung im Rechenzentrum bereits von Anfang an berücksichtigt. 
+Es existieren dafür bereits etablierte Standards und Prozesse, wie etwa Qualitäts-Managementprozess für Software, Reifegradmodelle oder ähnliches. 
+Problematisch wird es hingegen, wenn der Betrieb und die Weiterentwicklung einer Forschungssoftware aus RZ-fremden Bereichen, wie Projekten, universitären Einrichtungen, übernommen werden sollen.
+Denn dort existieren oft die entsprechenden Regularien nicht und auch die daraus folgenden Software Engineering-Praktiken sind wenig oder nicht bekannt. 
+Es ist daher zu überlegen, inwiefern es von RSEs und Rechenzentrum gemeinsam erarbeitete Prinzipien, Standards und \textit{Best Practices} für das RSEng braucht, so dass die Anforderungen für einen künftigen Betrieb der Forschungssoftware im Rechenzentrum von Anfang an mitgedacht werden können. 
+Eventuell sind auch gemeinsame Entwicklungsplattformen oder Praktiken, z.B. DevOps, als Lösungsansatz möglich. 
+Dabei sollte stets die Anschlussfähigkeit an die European Open Science Cloud (EOSC) und die Nationalen Forschungsdateninfrastrukturen (NFDI) mitbedacht werden, 
+um die Kompatibilität und die Integration von Forschungssoftware in die Infrastrukturen der Rechenzentren sicherzustellen.
 
-## Zehn Handlungsempfehlungen zu besseren Forschungssoftwarekompetenzen an deutschen Wissenschaftsinstitutionen
+\subsection{Open Science und Forschungssoftwarekompetenzen}
+In ihrem Impulsvortrag\footnote{\cite{SlidesHeidi}.} betonte Heidi Seibold von der Digital Research Academy die Bedeutung von Open Science, 
+um die Qualität und Reproduzierbarkeit von Forschungsergebnissen sicherzustellen. 
+Dazu bedarf es einer Reihe von Werkzeugen, etwa für die digitale Organisation von Dateien, Versionskontrolle oder Programmierkenntnisse, 
+deren Handhabung durch die Forschenden entsprechende Fähigkeiten voraussetzt. 
+Oft mangelt es im Forschungsalltag jedoch an der Zeit, die Forschenden für die Umsetzung von Open Science eingeräumt wird.
+Um dies zu verbessern, sind Expert:innen erforderlich, die sich mit Open Science und Forschungssoftware hinreichend auskennen 
+und die andere Forschende darin unterstützen können. 
+Erfolge gibt es bereits, wie zum Beispiel die zunehmende Anerkennung des Bedarfs an RSEng-Kompetenzen. 
+Ebenso zu nennen sind die vielen Initiativen, die sich für Open Science, 
+Reproduzierbarkeit und die dazugehörigen digitalen Fähigkeiten einsetzen, 
+wie beispielsweise \glqq{}The Turing Way\grqq{}\footnote{\url{http://the-turing-way.org}.}, 
+\glqq{}The Carpentries\grqq\footnote{\url{https://carpentries.org}.} 
+und \glqq{}CodeRefinery\grqq{}\footnote{\url{https://coderefinery.org}.}. 
+Diese Projekte zeigen, dass es möglich ist, Open Science und RSEng-Kompetenzen zu fördern und erfolgreich zu implementieren.
 
-<!-- Ergebnisse der Karo-Gruppe 
-* https://pad.gwdg.de/s/YWYeMoouJ
-?-->
 
-**Einleitung**
-Die zunehmende Bedeutung von Forschungssoftware in der Wissenschaft erfordert nicht nur technische Expertise, sondern auch gezielte Strategien für den Aufbau von Kompetenzen und Netzwerken. Der Schlüssel zu nachhaltigem Kompetenzaufbau liegt darin, eine lebendige Community zu schaffen, die den Wissensaustausch fördert und Forschende auf allen Ebenen einbindet. Im Folgenden geben wir spezifische Handlungsempfehlungen, wie durch Multiplikator\*innen, niedrigschwellige Einstiegsangebote und fortgeschrittene Entwicklungsprogramme eine starke Community aufgebaut werden kann.
+\subsection{Forschungssoftwarekompetenzen an Einrichtungen des Höchstleistungsrechnens}
+Forschungssoftwarekompetenzen und HPC sind laut Sarah M. Neuwirth von der Universität Mainz Schlüssel zu Innovation und Effizienz in der wissenschaftlichen Forschung.\footnote{\cite{SlidesSarah}.} 
+Im HPC-Bereich dient Software als Brücke zwischen leistungsfähiger Hardware und wissenschaftlichen Fragestellungen. 
+Durch standardisierte Softwarepraktiken können interdisziplinäre Teams unterstützt werden. 
+Jedoch sind solche Standards noch nicht überall etabliert. 
+Außerdem verfügen Wissenschaftler:innen oft nicht über formale Ausbildung in Software-Engineering-Praktiken. 
+Probleme entstehen auch durch die mitunter unzureichend  Dokumentation von Forschungssoftware und die fehlende Nachhaltigkeit in der Softwareentwicklung, was die Reproduzierbarkeit wiederum erschwert. 
+Beim Entwicklungsprozess treten häufig Transferprobleme zwischen Disziplinen auf, 
+da Softwareentwickler:innen und Fachwissenschaftler:innen oft unterschiedliche \glqq{}Sprachen\grqq{}\ sprechen.
 
-**Multiplikator\*innen als Ankerpunkt der Community**
-Multiplikator\*innen sind unverzichtbar, um das Thema Forschungssoftware in den wissenschaftlichen Alltag zu integrieren und den Austausch innerhalb und zwischen Institutionen zu fördern. Einrichtungen wie Universitäten, Forschungseinrichtungen und Arbeitsgruppen sollten gezielt Personen oder Teams benennen, die als zentrale Ansprechstelle fungieren. Diese Multiplikator\*innen können Einzelpersonen sein, aber auch Gremien oder spezialisierte Arbeitsgruppen. Idealerweise füllen Champions die Rolle der Multiplikator\*innen aus, die sich intrinsisch motiviert im Thema engagieren und kommunikationsstark sind.
-Ihre Hauptaufgabe besteht darin, Forschende miteinander zu vernetzen – nicht nur innerhalb eines Instituts, sondern auch über disziplinäre und institutionelle Grenzen hinweg. Sie stärken die Sichtbarkeit von Forschungssoftwarethemen, verbreiten Best Practices und fördern die interdisziplinäre Zusammenarbeit. Multiplikator\*innen müssen dabei keine technischen Expert\*innen sein, sollten jedoch ein grundlegendes Verständnis für die Herausforderungen der Softwareentwicklung und Bedürfnisse der Forschenden mitbringen. Ihre Fähigkeit, klar zu kommunizieren und als Knotenpunkt eines Netzwerks zu agieren, ist entscheidend für den Erfolg ihrer Rolle.
-Indem Multiplikator\*innen nicht nur das Wissen innerhalb der Community verbreiten, sondern auch Impulse von außen aufnehmen, tragen sie aktiv dazu bei, die Community weiterzuentwickeln und nachhaltig auszubauen. 
+\subsection{Forschungsdatenmanagement und Forschungssoftware}
+Cora Assmann von der Universität Jena verwies in ihrem Vortrag darauf, dass Forschungssoftwarekompetenzen ein zentraler Baustein im Forschungsdatenmanagement sind, 
+da Software in allen Phasen des Datenlebenszyklus eine entscheidende Rolle spielt.\footnote{\cite{SlidesCora}.} 
+Software begleitet Forschende bei der Erzeugung, Analyse, Bearbeitung, Qualitätssicherung und Verwaltung von Forschungsdaten.
+Allerdings gibt es institutionelle Herausforderungen bei der Förderung von Forschungssoftwarekompetenzen. 
+Teilweise fehlt es am Bewusstsein für das Thema oder es wird nicht als prioritäres Handlungsfeld gesehen. 
+Institutionen verfügen häufig nicht über die finanziellen und personellen Ressourcen, 
+um nachhaltige Angebote oder Strukturen zu schaffen. 
+Auch auf individueller Ebene bei den Wissenschaftler:innen gibt es vielfältige Hürden für den Erwerb von Forschungssoftwarekompetenzen. 
+Forschende haben oft wenig Zeit, um sich weiterzubilden, und erhalten nicht immer die notwendige Unterstützung durch ihre Vorgesetzten. 
+Bestehende Fortbildungsmöglichkeiten sind teilweise unbekannt oder es ist Wissenschaftler:innen gar nicht bewusst, 
+dass ihnen Kompetenzen im Bereich Forschungssoftware fehlen. 
+Hinzu kommt, dass Forschungsdaten sehr vielfältig und komplex sind 
+und notwendige Softwarekompetenzen häufig disziplinspezifisch benötigt werden, 
+solche Angebot aber teilweise noch nicht existieren.
 
-**Niedrigschwellige Einstiegsangebote: Der Weg zur Community**
-Um Forschende für die Community zu gewinnen, ist es essenziell, Hürden beim Einstieg zu minimieren. Viele Forschende haben Berührungsängste mit Themen wie Softwareentwicklung oder betrachten sich nicht als Teil der Forschungssoftware-Community. Institutionen können hier ansetzen, indem sie Einsteiger\*innen direkt zu Beginn, beispielsweise ihres ersten Codingprojektes innerhalb der Forschung, explizit ansprechen und personalisierte Unterstützung anbieten.
-Mögliche Wege dorthin beginnen mit der Bereitstellung klar definierter Einstiegspunkte. Persönlicher Kontakt durch benannte Ansprechpersonen oder Mentoring-Programme kann den Einstieg erleichtern. Zusätzlich bieten digitale Tools wie Wikis, Online-Foren oder Chatkanäle flexible Möglichkeiten für Selbststudium und Austausch. Praktische Formate wie Hackathons, Advent of Code oder Code Katas machen den Lernprozess interaktiv und fördern den direkten Kontakt mit der Community.
-Je zugänglicher der Einstieg gestaltet wird, desto mehr Forschende fühlen sich ermutigt, Teil dieser Gemeinschaft zu werden und ihr Wissen aktiv einzubringen.
+\subsection{Inner- und überinstitutionelle Weiterbildung bei Forschungssoftware}
+Die Entwicklung von Forschungssoftware ist für Lorenzo Zanon vom Höchstleistungsrechenzentrum an der Universität Stuttgart (HLRS) oft ein komplexes Unterfangen, 
+das nicht nur Fachwissen, sondern auch spezielle Kompetenzen in der Softwareentwicklung erfordert.
+\footnote{\cite{SlidesLorenzo}.} 
+Wissenschaftler:innen, die sich mit der Entwicklung von Forschungssoftware auseinandersetzen, 
+müssen nicht nur Kenntnisse in Code-Best-Practices haben, 
+sondern auch in der Lage sein größere Programme zu lesen, zu pflegen und zu erweitern. 
+Durch Weiterbildungen und Trainings kann dies schon jetzt erreicht werden, 
+indem die jeweiligen Anbieter sich auf die Bedürfnisse der Forschenden und die Herausforderungen der Softwareentwicklung konzentrieren.
 
-**Fortgeschrittene Angebote: Kompetenzen nachhaltig stärken**
-Neben dem Einstieg spielt die Weiterentwicklung bestehender Kompetenzen eine zentrale Rolle für den langfristigen Erfolg der Community. Forschende, die erste Erfahrungen gesammelt haben, benötigen Gelegenheiten, ihre Fähigkeiten in einem größeren Kontext anzuwenden und zu vertiefen. Dies ist besonders wichtig in der Phase nach den ersten Codingerfahrungen, in der Einsteigerwissen nicht mehr ausreicht, um domänenspezifische Codingprojekte weiterzuentwickeln („Tal der Verzweiflung“ nach dem Dunning-Kruger-Effekt).
-Fortgeschrittene Formate wie „Bring your own code“-Hackathons ermöglichen es, konkrete Projekte mit Unterstützung von Expert\*innen weiterzuentwickeln. Schulungen mit direktem Bezug zur eigenen Forschungsdomäne helfen, die Brücke zwischen Theorie und Praxis zu schlagen. Gleichzeitig sollten Forschende ermutigt werden, sich aktiv in die Community einzubringen, etwa durch Peer-Coding, Mentoring oder die Moderation von Diskussionsforen.
-Ein wichtiger Aspekt ist das Erwartungsmanagement: Grenzen der Begleitung sollten möglichst frühzeitig definiert und kommuniziert werden. Auf diese Weise lassen sich realistische Ziele setzen und Enttäuschungen vermeiden. Der Fokus sollte darauf liegen, Forschende zu befähigen, selbstständig zu agieren und ihre Erkenntnisse in die eigene Forschungsumgebung zu transferieren.
 
-![](https://pad.gwdg.de/uploads/93dc5b19-fc0b-41a1-b33f-64d4f6cc1272.png)
+\section{Handlungsempfehlungen zu besseren Forschungssoftwarekompetenzen an deutschen Wissenschaftsinstitutionen}
 
-**Fazit: Eine starke Community als Schlüssel zum Erfolg**
-Der Aufbau von Forschungssoftwarekompetenzen ist mehr als die Vermittlung technischer Fähigkeiten. Entscheidend ist die Schaffung einer aktiven, inklusiven Community, die den Austausch zwischen Forschenden untereinander und Softwareexpert\*innen fördert. Multiplikator\*innen sind hierbei der Dreh- und Angelpunkt, da sie den Wissenstransfer koordinieren und Netzwerke etablieren. Niedrigschwellige Einstiegsangebote senken Barrieren und motivieren Forschende, sich in die Community einzubringen, während fortgeschrittene Programme den Transfer in die eigene Domäne und die nachhaltige Kompetenzentwicklung unterstützen.
+Die Impulsvorträge des Symposiums zeigen zum einen Maßnahmen mit Vorbildcharakter, 
+zum anderen verdeutlichen sie den Bedarf an Forschungssoftwarekompetenzen in unterschiedlichen wissenschaftlichen Bereichen. 
+Zudem werden Hindernisse aufgezeigt, 
+welche für eine Stärkung von Forschungssoftwarekompetenzen überwunden werden müssen. 
+Im Rahmen des Workshops sind daher konkrete Handlungsempfehlungen formuliert worden.
+Sie bieten verschiedenen Akteur:innen im Wissenschaftssystem Möglichkeiten, die (Weiter-)Entwicklung von Kompetenzen in Forschungssoftware aus unterschiedlichen Blickwinkeln zu fördern. 
+Für eine langfristige, nachhaltige Verbesserung der Forschungssoftwarekompetenzen in der Wissenschaft ist ein Zusammenspiel all dieser Akteur:innen wünschenswert.
 
-**Glossar**
-**Multiplikator\*in:**
-Eine zentrale Ansprechperson oder ein Gremium, das den Wissensaustausch innerhalb einer Institution oder Community koordiniert. Multiplikator\*innen vernetzen Forschende, verbreiten Best Practices und fördern interdisziplinäre Zusammenarbeit, ohne zwingend selbst technische Expertinnen sein zu müssen.
+\subsection*{Zielgruppen}
+Es existiert keine universelle Maßnahme zur Förderung von Forschungssoftwarekompetenzen, 
+die für alle gültig ist. 
+Stattdessen sollten je nach Kontext und Funktion zielgerichtete Vorgehen etabliert
+und entsprechend zielgruppenspezifische Handlungsempfehlungen für die verschiedenen Funktionsgruppen in unterschiedlichen wissenschaftlichen Institutionen entwickelt werden. 
+Dazu haben wir eine Reihe konkreter Zielgruppen definiert: Wissenschaftspolitik, Fördergeber, Wissenschaftliche Infrastruktur, Institutsleitungen, Führungskräfte, Lehrpersonal, Interessensvertretungen und -verbände, sowie Entwickler:innen von Forschungssoftware.
+\\
 
-**Champion:**
-Eine Person, die Expert\*in in ihrem Fachgebiet ist und sich durch außergewöhnliche intrinsische Motivation sowie starkes Engagement auszeichnet. Champions treiben Innovationen voran, teilen ihr Wissen aktiv und übernehmen oft eine Vorbildrolle in der Community.
+\textit{Entwickler:innen von Forschungssoftware und deren Netzwerke:} Obwohl sie die \glqq{}kleinste Einheit\grqq{}\ sind, können Entwickler:innen von Forschungssoftware und Netzwerke, \glqq{}RSEng Champions\grqq{} (siehe Definition in Kapitel~\ref{rse-community}) oder lokale RSE-Netzwerke in ihrem unmittelbaren Umfeld bedeutungsvolle Beiträge leisten, insbesondere bei Community Aspekten.
+Als Nutzende der Ergebnisse von Handlungsempfehlungen, etwa Lernangeboten, können sie auch maßgeblich an höhere Zielgruppen vermitteln, dass ein Bedarf im Bereich von Forschungssoftwarekompetenzen besteht.\\
 
-**Community-Building:**
-Der systematische Aufbau und die Pflege einer Gemeinschaft, in der Mitglieder ihr Wissen, ihre Erfahrungen und Ressourcen teilen, um gemeinsame Ziele zu erreichen. Im Kontext von Forschungssoftware steht Community-Building für die Förderung von Zusammenarbeit und den Aufbau von Netzwerken zwischen Forschenden und Softwareexpert\*innen.
+\textit{Interessensvertretungen und -verbände}: Interessensvertretungen und -verbände wie etwa die Research Software Alliance\footnote{\url{https://www.researchsoft.org/}} oder de-RSE e.V.\footnote{\url{https://de-rse.org}.} können Interessen institutionsübergreifend bündeln. Sie repräsentieren sowohl lokal eingebundene RSEs als auch Entwickler:innen ohne Netzwerk und können systemische Anliegen auf nationaler und internationaler Ebene verfechten.
+Hierzu zählen auch die Fachgesellschaften, wie etwa die Gesellschaft für Informatik (GI)\footnote{\url{https://gi.de}.}, welche darüber hinaus die spezifischen Kompetenzen innerhalb ihres Bereichs identifizieren und fördern können. \\
 
-**Hackathon:**
-Eine zeitlich begrenzte Veranstaltung, bei der Teilnehmende zusammenkommen, um an spezifischen Projekten oder Problemen zu arbeiten. Ziel ist es, in kurzer Zeit innovative Lösungen zu entwickeln.
+\textit{Wissenschaftliches Lehrpersonal:} Lehrkräfte sind in der einzigartigen Position, Forschungssoftwarekompetenzen einer großen Menge zukünftiger Forschender zu demonstrieren und zu vermitteln.
+Diese Weitergabe kann zu einem langfristigen Kulturwandel beitragen. \\
 
-**Advent of Code:**
-Ein jährlich stattfindendes Programmier-Event, bei dem Teilnehmende in der Adventszeit täglich neue algorithmische Herausforderungen lösen können. Es wird oft als praxisnahes Training für Programmierfähigkeiten genutzt.
+\textit{Wissenschaftliche Führungskräfte:} Innerhalb des wissenschaftlichen Systems haben wissenschaftliche Führungskräfte großen direkten Einfluss auf die wissenschaftliche Praxis auf den verschiedenen Ebenen, die sie verantworten 
+-- sei es als Fachbereichs-, Arbeitsgruppen- oder Projektleitung. 
+Sie bestimmen mit Anreizen, Arbeitskultur oder Anforderungen an Mitarbeitende maßgeblich, 
+ob sich digitale Kompetenzen entwickeln können oder nicht.\\
 
-**Code Kata:**
-Eine Übungsmethode aus der Softwareentwicklung, bei der Entwickelnde wiederholt kleinere Programmieraufgaben lösen, um ihre Fähigkeiten zu verbessern und neue Techniken zu erlernen.
+\textit{Einrichtungsleitungen:} Führungspersonal von Wissenschaftsorganisationen, Universitäten, Hochschulen, außeruniversitären Forschungseinrichtungen, oder im Bereich der Forschungskoordination hat zwar weniger direkten Einfluss auf wissenschaftliche Praxis, kann aber über zentrale Vorgaben und Prioritätensetzung digitalen Kompetenzerwerb fördern.\\
 
-**Train Tracks:**
-Begleitende Lernpfade oder Workshops, die parallel zu anderen Formaten wie Hackathons stattfinden. Sie bieten gezielte Schulungen und Unterstützung zu spezifischen Themen oder Technologien.
+\textit{Lokale wissenschaftliche Infrastruktur}: Unter lokaler wissenschaftlicher Infrastruktur verstehen wir Services, wie Studiengangskoordination, Kommunikationsteams, Data Stewards, oder Open Science Offices. 
+Sie können von Institution zu Institution unterschiedlich präsent sein und nicht in jeder Einrichtung zur Verfügung stehen. 
+Wo sie vorhanden ist, kann lokale wissenschaftliche Infrastruktur aber abteilungsübergreifende unterstützende Rahmenbedingungen schaffen, 
+um Forschungssoftwarekompetenzen zu fördern. \\
 
-**Bring your own code (BYOC):**
-Ein Konzept, bei dem Forschende ihre eigenen Softwareprojekte zu Veranstaltungen wie Hackathons oder Workshops mitbringen. Dort erhalten sie Unterstützung von Expert\*innen, um ihre Projekte weiterzuentwickeln oder zu optimieren.
-Peer-Coding:
-Ein kollaborativer Ansatz, bei dem zwei oder mehr Personen gemeinsam an einem Programm arbeiten, um voneinander zu lernen, Fehler zu reduzieren und kreative Lösungen zu entwickeln.
+\textit{Wissenschaftliche Großinfrastruktur/zentrale Einrichtungen:} Wissenschaftliche Großinfrastruktur- und Serviceanbieter wie Bibliotheken und Rechenzentren sind seit jeher an der Schnittstelle zwischen unterschiedlichen wissenschaftlichen Bereichen. 
+Da ihr Angebot nicht originär fachspezifisch ausgelegt ist, wirken sie bereits fachübergreifend als Multiplikatoren und können vermittelnd und werbend im Bereich RSEng aktiv werden. 
+Zudem beschäftigen diese Einrichtungen typischerweise auch selbst Personen mit Softwarekompetenzen, 
+um ihr Serviceportfolio weiterzuentwickeln,
+so dass eine Nutzung von Synergien zwischen RSE-Aktivitäten in der Wissenschaft und in wissenschaftlichen Serviceeinrichtungen möglich wird.
+\\
 
-**Product Owner:**
-Eine Rolle aus der agilen Softwareentwicklung, die für die Definition von Anforderungen und die Priorisierung von Aufgaben verantwortlich ist. Im Kontext von Forschungssoftware beschreibt dies eine Person mit tiefem Verständnis für die Bedürfnisse der Nutzenden und die Probleme, die gelöst werden sollen.
+\textit{Fördergeber:} 
+Im Wissenschaftssystem haben die Förderer eine zentrale Rolle inne, 
+indem sie durch die Vergabe von Mitteln entscheidend das Profil der wissenschaftlichen Arbeit beeinflussen.
+Neben der direkten Vergabe von Mitteln zur Förderung von Forschungssoftware ist dabei insbesondere die Festlegung der Rahmenbedingungen zur Förderung von Vorhaben mit Softwareaspekten ein wichtiger Hebel der Fördergeber. 
+In den vergangenen Jahren hat sich bereits einiges in diesem Bereich getan.\footnote{Siehe beispielsweise \cite{DFG2024UmgangForschungssoftware}.}\\
 
-**Single Point of Contact (SPOC):**
-Eine zentrale Anlaufstelle innerhalb einer Organisation oder Community, die Fragen koordiniert und als Bindeglied zwischen verschiedenen Akteurinnen fungiert. Multiplikatorinnen übernehmen häufig diese Funktion.
+\textit{Wissenschaftspolitik:} Die Zielgruppe mit der langfristigsten Perspektive ist die der Wissenschaftspolitik. 
+Sie kann insbesondere dafür Sorge tragen, dass sich die Arbeitsbedingungen in der Wissenschaft so verändern, dass Softwarekompetenz im Wissenschaftssystem gefördert wird. Neben klassischen Akteuren wie Parteien spielen dabei auch politische Vernetzungsinitiativen wie etwa die Allianz der Wissenschaftsorganisationen\footnote{\url{https://www.allianz-der-wissenschaftsorganisationen.de}.} eine entscheidende Rolle.
+\\
 
----
+Die folgenden Handlungsempfehlungen gliedern sich in drei Hauptbereiche: \glqq{}Lernangebote bereiten\grqq{}, \glqq{}RSE-Communities fördern\grqq{} sowie \glqq{}Anreize und Rahmen entwickeln\grqq{}. 
+Innerhalb dieser Hauptbereiche formulieren wir konkrete Handlungsempfehlungen - wenn möglich zielgruppenspezifisch.
 
-<!-- Ergebnisse der Herz-Gruppe 
-* https://pad.gwdg.de/s/ZXmW8iXm2
-?-->
 
-## Zusammenfassung
+\subsection{Lernangebote bereiten}
+Ein zentrales Element in der Förderung von Forschungssoftwarekompetenzen sind Ausbildungsangebote an Personen im wissenschaftlichen System. 
 
-## Ausblick
-* Menschen im Zentrum https://researchsoft.org/blog/2023-10/
-* mit Zukunftsvision 2030 abgleichen[^12]
+\subsubsection{Wissenschaftliches Lehrpersonal}
 
-<!-- to dos
-* Literaturangaben ausschreiben
-* alle Autor_innen korrekt zitieren
-* md via Pandas in Latex migrieren
-* VW-Stiftung nach Publikation informieren
-?-->
+\paragraph{Vermittelt Open Science!} Open Science sollte Einzug in die Lehre erhalten. 
+Dazu gehören sowohl theoretisches als auch praktisches Wissen. 
+Im ersten Schritt wünschen wir uns dazu eine Reflexion der (digitalen) Kompetenzen,
+die in vorhandenen Lehrveranstaltungen vorkommen, sowie der Tools, die dies unterstützen. 
+Im Sinne der offenen Wissenschaft sollte, wo möglich, in der Lehre auf offene Softwarewerkzeuge (FOSS/FLOSS\footnote{\url{https://en.wikipedia.org/wiki/Free_and_open-source_software}}) gesetzt und begründet werden, warum diese bevorzugt werden, z.B. mit \glqq{}Public money, public code\grqq{}.
 
-[^1]: https://hdsr.mitpress.mit.edu/pub/f0f7h5cu
-[^2]: https://doi.org/10.12688/f1000research.23224.2
-[^3]: https://www.volkswagenstiftung.de/de/foerderung/foerderangebot/themenwoche-digitale-kompetenzen-der-wissenschaft-beendet
-[^4]: https://zenodo.org/doi/10.5281/zenodo.10867903
-[^5]: https://doi.org/10.5281/zenodo.7740084
-[^6]: https://doi.org/10.12688/f1000research.155879.1
-[^7]: https://zenodo.org/doi/10.5281/zenodo.13740998
-[^8]: https://zenodo.org/doi/10.5281/zenodo.13919790
-[^9]: https://doi.org/10.5281/zenodo.14265404
-[^10]: http://arxiv.org/abs/2311.11457
-[^11]: L. Grunske, A.- L. Lamprecht, W. Hasselbring, B. Rumpe: Research Software Engineering - Forschungssoftware effizient erstellen und dauerhaft erhalten. In: Forschung & Lehre - Zukunft der Arbeit, Band 24(3), pp. 186-188, Feb. 2024. KEINE DOI!
-[^12]: https://ieeexplore.ieee.org/document/10254813/
-[^13]: https://doi.org/10.5281/zenodo.14266458
-[^14]: https://doi.org/10.5281/zenodo.14273083
-[^15]: https://doi.org/10.5281/zenodo.14273217
-[^16]: https://doi.org/10.5281/zenodo.14273293
-[^17]: https://doi.org/10.5281/zenodo.14287152
-[^18]: Für den Abschlussbericht zum Forschungsdatenmanagement an Hochschulen für angewandte Wissenschaften siehe https://doi.org/10.5281/zenodo.14285460.
+\paragraph{Gebt konkrete Empfehlungen zum Selbststudium!}  
+In der praktischen Anwendung der Inhalte einer Vorlesung werden häufig digitale Tools verwendet. 
+Diese sollten im Rahmen der Literaturempfehlung, z.B. in Vorlesungsskripten, ebenso Erwähnung finden. 
+Das gibt Studierenden Impulse dazu, was neben der Vorlesung interessant und relevant für das Selbststudium ist.
+
+\paragraph{Nutzt vorhandene Materialien!} Lehrkräfte müssen neue Materialien selten allein entwickeln, da insbesondere für die Lehre von digitalen Kompetenzen viele frei nutzbare Materialien, etwa open educational resources(OER\footnote{\url{https://de.wikipedia.org/wiki/Open_Educational_Resources}}), verfügbar sind. 
+Im Bereich der Forschungssoftwarekompetenzen gibt es hier bereits koordinierte Bestrebungen und Projekte, wie z.B. The Carpentries\footnote{\url{https://carpentries.org/}},
+CodeRefinery\footnote{\url{https://coderefinery.org/}},
+Elixir\footnote{\url{https://elixir-europe.org/}},
+INTERSECT\footnote{\url{https://intersect-training.org}},
+UniverseHPC\footnote{\url{https://www.universe-hpc.ac.uk/}},
+oder \glqq{}The Missing Semester of your CS education\grqq{}\footnote{\url{https://missing.csail.mit.edu/}}. 
+Diese stellen ihre Materialien mit einer nachnutzbaren offenen Lizenz -- häufig unter CC-BY\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} -- zur Verfügung und sind offen für Mitarbeit und Beiträge.
+
+\paragraph{Bildet euch weiter!} Um die Qualität der Lehrveranstaltungen zu sichern und weiter zu erhöhen, bieten manche der oben genannten Organisationen/Projekte verschiedene Formen von \glqq{}Train-the-Trainer\grqq{}-Workshops an.%
+\footnote{Siehe hierzu beispielsweise die \glqq{}Train-the-Trainer\grqq{}-Workshop im Forschungsdatenmanagement, \cite{biernacka_train-trainer-konzept_2023} 
+oder das \glqq{}Carpentries Instructor Training\grqq\ \url{https://carpentries.org/instructor-training/}.} 
+Bei diesen kann man sich für die Vermittlung von digitalen Kompetenzen fortbilden.
+
+\paragraph{Schafft innovative Formate für Lernende ohne bestehende Community!} Insbesondere für Forschungssoftwareentwickler:innen ohne lokales RSE Netzwerk sind Lernmöglichkeiten zum Selbststudium und Austausch, wie Wikis, Online-Foren oder Chatkanäle wichtig.
+Praktische Formate wie Hackathons, Advent of Code oder Code Katas gestalten den Lernprozess interaktiv und fördern den direkten Kontakt mit der Community. 
+Gleichzeitig sollten Forschende ermutigt werden, sich aktiv in die Community einzubringen, etwa durch Peer-Coding, Mentoring oder die Moderation von Diskussionsforen.
+
+\subsubsection{Wissenschaftliche Führungskräfte}
+
+\paragraph{Seid Mentor:in!} Wenn Führungskräfte selbst digital kompetent sind, 
+sollten sie Mitarbeitenden als Mentor:in im Softwarekompetenzbereich zur Verfügung stehen. 
+Beispiele sind Onboarding in digitale Arbeitsprozesse oder Werkzeuge im Rahmen von wissenschaftlicher Arbeit, 
+das Identifizieren relevanter digitaler Kompetenzen bei Mentees und die Ermutigung zum Erwerb dieser Kompetenzen, 
+oder die Einbindung in relevante Angebote und Netzwerke.
+
+
+\subsubsection{Wissenschaftliche Infrastruktur}
+
+\paragraph{Integriert digitale Kompetenzen frühzeitig in die Studienpläne!} Lehrveranstaltungen zur Vermittlung von digitalen Kompetenzen sollten im Studiengang verfügbar sein, und die Teilnahme etwa in Beispielstudienplänen erwähnt werden.
+Eine verpflichtende Teilnahme kann auch in Betracht gezogen werden, wenn ein hinreichender Anteil der Studierenden die vermittelten digitalen Kompetenzen im Laufe ihres Studiums benötigt.
+Eine niederschwellige Möglichkeit der Einführung allgemeiner Kompetenzen bieten fachübergreifende Schlüsselqualifikationskurse.
+Es kann allerdings von Vorteil sein, wenn allgemeine Kurse mit fachspezifischer Zielgruppe angeboten werden können, um eine einladende und verbindende Atmosphäre zu schaffen und auf typische Erfahrungen und Schwierigkeiten einzugehen.
+Thematisch spielen je nach Fachbereich sowohl allgemeine Einführungskurse als auch Schwerpunktkurse eine große Rolle.
+Beispiele für erstere sind etwa Kurse zu fachübergreifenden Themen wie Versions- oder Literaturverwaltung.
+Letztere sind Kurse zu fachspezifischeren Themen, wie etwa die Nutzung von Jupyter Notebooks, HPC-Systemen oder Forschungsdatenmanagement.
+
+
+\paragraph{Macht Lehrveranstaltungen zu digitalen Kompetenzen sichtbar!} Zusätzlich zur Integration in die Studienpläne sollten Lehrveranstaltungen sichtbar und einfach verfügbar sein.
+Digitale Kompetenzen haben während des Studiums fortwährende Relevanz, aber Studierenden kann das Fehlen dieser Kompetenzen oder die Verfügbarkeit der Angebote unter Umständen nicht bewusst sein.
+Bestehende Angebote sollten daher bereits möglichst zu Studienbeginn beworben werden.
+Die größte Rolle spielen diese Kompetenzen in spezifischen Studienleistungen wie Praktika und Bachelor- und Masterarbeiten.
+Daher können Einführungs- und Informationsveranstaltungen verwendet werden, um erneut auf verfügbare Angebote zu verweisen.
+
+\subsubsection{Wissenschaftliche Großinfrastruktur und Serviceanbieter}
+\paragraph{Nutzt eure Netzwerke!} Da Serviceanbieter wie wissenschaftliche Bibliotheken oder Rechenzentren fachbereichsübergreifend wirken, können diese Strukturen auch als idealer Einstieg gesehen werden, eine Kooperation zwischen verschiedenen Akteuren im Bereich Forschungssoftware zu vermitteln oder Querverweise zu erstellen.
+Unter Einbezug aller zentralen Einrichtungen und mit den Netzwerken der Infrastrukturanbieter über lokale Akteure hinaus können föderierte Angebote erarbeitet und vorhandene Kompetenzen überregional gebündelt werden.
+
+\paragraph{Baut niederschwellige Angebote aus!} Infrastruktur- und Serviceanbieter können Hemmschwellen zwischen Fächern abbauen, 
+indem sie ihr Kursangebot trotz fachübergreifendem Inhalt zielgruppenspezifisch aufarbeiten beziehungsweise anbieten. 
+Um das Kursangebot gezielter ausrichten zu können, sollten sie die Ergebnisse von Zielgruppenevaluation mit relevanten Akteuren aus dem Bereich RSEng teilen. 
+Und sie sollten Werbung und Außenwirkung um das Thema Softwarekompetenz erweitern. 
+
+\paragraph{Bildet euch selbst weiter!} Bei internen Weiterbildungen sollten sich Infrastruktur- und Serviceanbieter nicht nur auf klassische Personalentwicklungsthemen konzentrieren, 
+sondern auch RSEng-Themen einbinden. 
+Wenn es in einem Fachbereich akuten Bedarf an einer Schulung im Bereich Forschungssoftwarekompetenzen gibt, 
+und gleichzeitig ein bestehendes Angebot in einer anderen Abteilung, können Ressourcen gebündelt und Lehrkräfte \glqq{}verliehen\grqq{}\ werden. 
+So können Ressourcen innerhalb der Organisation effizient eingesetzt werden. 
+Dies dient auch der Etablierung einer breiten Kompetenzbasis und der Werbung für die unterschiedlichen Arbeitsfelder im RSEng-Bereich.
+
+\paragraph{Stärkt Kompetenzen mit fortgeschrittenen Lernangeboten und Unterstützungsangeboten nachhaltig!} Forschende, die erste Erfahrungen gesammelt haben, benötigen Gelegenheiten, ihre Fähigkeiten in einem größeren Kontext anzuwenden und zu vertiefen. 
+Dies ist besonders wichtig in der Phase nach den ersten Coding-Erfahrungen, in der Einsteigerwissen nicht mehr ausreicht, um domänenspezifische Coding-Projekte weiterzuentwickeln.
+Fortgeschrittene Formate wie \glqq{}Bring your own code\grqq{}-Hackathons ermöglichen es, konkrete Projekte mit Unterstützung von Expert:innen weiterzuentwickeln. 
+Schulungen mit direktem Bezug zur eigenen Forschungsdomäne helfen, die Brücke zwischen Theorie und Empirie zu schlagen.
+Ein wichtiger Aspekt ist das Erwartungsmanagement. 
+Der Fokus sollte darauf liegen, Forschende zu befähigen, selbstständig zu agieren und ihre Erkenntnisse in die eigene Forschungsumgebung zu transferieren. 
+Grenzen der Begleitung sollten möglichst frühzeitig definiert und kommuniziert werden. 
+Auf diese Weise lassen sich realistische Ziele setzen und Enttäuschungen vermeiden. 
+
+\subsubsection{Fördergeber}
+\textbf{Setzt die offene Bereitstellung von Lehrmaterial durch!} Bei der Evaluation von Projekten soll darauf hingewirkt werden, 
+dass die dort entwickelten Lehrmaterialien als Open Educational Resources (OER) bereitgestellt werden, 
+um sie über das Projekt hinaus und später nach zu nutzen.
+Dies muss zum Projektabschluss geprüft werden und bei Nichtbeachtung Konsequenzen haben, beispielsweise bei weiteren Anträgen.
+
+\subsubsection{Zielgruppenübergreifende Aufgaben}
+\paragraph{Ermittelt Bedarf oder meldet Bedarf!} Sämtliche Zielgruppen sollten aktiv an und in Bedarfsanalysen mitwirken. 
+Anbietende sollten in der Interaktion mit Forschenden, Lehrenden, und Studierenden die spezifischen Bedarfe für verschiedene Fachdisziplinen ermitteln und ihr Angebot daran orientieren; 
+Empfänger:innen dieser Angebote sollten proaktiv Bedarf kommunizieren und Angebote annehmen.
+
+\paragraph{Erhaltet längerfristig Angebote!} Sämtliche Zielgruppen, die Lernangebote bereiten, sollten sicherstellen, dass innerhalb ihrer Abteilung oder innerhalb der Institution ausreichend Menschen mit den zu vermittelnden Softwarekompetenzen vorhanden sind. 
+Dafür sollten sie Weiterbildungsangebote für Lehrende und daran Interessierte anbieten (\glqq{}Train-the-trainer\grqq{}), um genügend Nachwuchs sicherzustellen.
+
+\subsection{RSE-Community fördern}
+\label{rse-community}
+Der Schlüssel zu nachhaltigem Kompetenzaufbau liegt darin, eine lebendige Community zu schaffen, die den Wissensaustausch fördert und Forschende auf allen Ebenen einbindet. Die folgenden Handlungsempfehlungen zielen darauf, solche Communities zu fördern. 
+Je zugänglicher der Einstieg gestaltet wird, desto mehr Forschende fühlen sich ermutigt, Teil der RSE-Gemeinschaft zu werden und ihr Wissen aktiv einzubringen. 
+Gleichzeitig ist es wichtig, diese Communities nachhaltig weiterzuentwickeln. \\
+Innerhalb von RSE-Gemeinschaften gibt es Personen, die Sonderrollen einnehmen, die im Vorfeld der Handlungsempfehlungen definiert werden sollen. 
+In unserem Workshop wurden auf Basis von Erfahrungen in verschiedenen Institutionen und Kontexten zwei Sonderrollen identifiziert. 
+Wir stellen sie hier unter den Begriffen \glqq{}Multiplikator:innen\grqq{} und \glqq{}Champions\grqq{}\ vor. 
+Zuweilen haben Institutionen bereits formale Rollen oder Instrumente etabliert, kennen sie aber unter anderem Titel; 
+zuweilen fallen Personen ohne dedizierte Rollenbeschreibung in diese Kategorien; 
+theoretisch kann eine Einzelperson auch beide Rollen gleichzeitig ausfüllen. 
+Wichtiger als der konkrete Name ist was diese Rollen tun:\\
+
+\textit{Multiplikator:innen} sind ein zentraler Knotenpunkt im lokalen RSE-Netzwerk. 
+Sie dienen als erste Anlaufstelle für neue und etablierte Mitglieder, und vernetzen innerhalb und über die eigene Einrichtung hinaus. 
+Ihre Aufgaben bestehen darin, relevante Themen zu identifizieren, zu verstärken und Wissen zu verbreiten, 
+sowie den Austausch und die Zusammenarbeit über verschiedene Disziplinen und Einrichtungen hinweg zu fördern. 
+Sie stärken die Sichtbarkeit von Forschungssoftwarethemen, verbreiten \textit{Best Practices} und fördern die interdisziplinäre Zusammenarbeit. 
+Indem Multiplikator:innen nicht nur das Wissen innerhalb der Community verbreiten, sondern auch Impulse von außen aufnehmen, tragen sie aktiv dazu bei, die Community weiterzuentwickeln und nachhaltig auszubauen. 
+Sie erfüllen also Funktionen, die auch Community Manager:innen, Koordinator:innen oder Open-Science-Beauftragte zum Teil abdecken. 
+Dabei müssen Multiplikator:innen nicht zwangsläufig Einzelpersonen sein. Die Funktion einer Multiplikator:in kann beispielsweise auch durch Gremien, Fachgesellschaften, Initiativen oder spezialisierte Arbeitsgruppen erfüllt werden. Multiplikator:innen müssen dabei keine technischen Expert:innen sein, sollten jedoch ein grundlegendes Verständnis für die Herausforderungen der Softwareentwicklung und Bedürfnisse der Forschenden mitbringen. Ihre Fähigkeit, klar zu kommunizieren und als Knotenpunkt eines Netzwerks zu agieren, ist entscheidend für den Erfolg ihrer Rolle.\\
+
+\textit{Champions} sind in Abgrenzung dazu immer Fachexpert:innen. 
+Als eine Art Vorbild- oder Botschafter:innen-Rolle sind sie engagierte Unterstützer:innen der RSE-Community und haben entweder selbst Erfahrungen als RSEs oder arbeiten eng mit ihnen zusammen. 
+Darüber hinaus genießen sie jedoch auch Anerkennung und Glaubwürdigkeit innerhalb der Wissenschaftsgemeinschaft, und können Forschungsergebnisse, Erfolgsbeispiele und die Bedeutung von RSEng-Arbeit überzeugend vermitteln.
+Sie sind also Wissenschaftler:innen, die sich intrinsisch motiviert aktiv und öffentlich für die RSE-Community einsetzen und diese vertreten. 
+Damit machen sie die Relevanz von RSEs für den wissenschaftlichen Fortschritt sichtbar, motivieren Forschende und Institutionen, die Bedeutung von Softwareentwicklung in der Forschung ernst zu nehmen 
+und setzen sich für bessere Arbeitsbedingungen, Anerkennung und Ressourcen für RSEs ein. 
+Beispiele für Champions sind Professor:innen oder leitende Wissenschaftler:innen, 
+die öffentlich die Bedeutung von RSEng-Arbeit betonen; 
+RSEs selbst und ihre Teamleitungen, die durch ihre Projekte oder Publikationen herausstechen und eine Vorbildrolle einnehmen; 
+oder Mitarbeitende von Infrastruktureinrichtungen und Forschende, 
+beispielsweise Software Stewards (äquivalent zu Data Stewards), 
+\glqq{}Researchers Who Code\grqq{}\ (Forschende mit Softwareentwicklungsfähigkeiten), 
+Fachreferent:innen oder \glqq{}embedded developers\grqq{}\ (äquivalent zu sogenannten \glqq{}embedded librarians\grqq{})
+
+\subsubsection{Entwickler:innen von Forschungssoftware und deren Netzwerke}
+\paragraph{Erleichtert den Einstieg in existierende Communities!} Um Forschende für die Community zu gewinnen, müssen die Hürden beim Einstieg minimiert werden. 
+Viele Forschende haben Berührungsängste mit Themen wie Softwareentwicklung oder betrachten sich nicht als Teil der Forschungssoftware-Community. 
+Mögliche Lösungen liegen in persönlichem Kontakt durch benannte Ansprechpersonen (beispielsweise Champions) oder Mentoring-Programme, 
+aber auch in digitalen Werkzeugen wie Wikis, Online-Foren oder Chatkanäle, oder der Organisation von praktischen Formaten wie Hackathons, \glqq{}Advent of Code\grqq{}\ oder Code Katas, um den direkten Kontakt mit der Community zu fördern.
+
+\paragraph{Findet und erzählt Geschichten!} Durch die Präsentation von Erfolgsbeispielen von RSEs (\glqq{}RSE-Geschichten\grqq{}) oder Fallstudien mit klaren Herausforderungen, Lösungen und Ergebnissen (\glqq{}Case Studies\grqq{}),
+können Nachwuchsforscher:innen und institutionelle Entscheider:innen motiviert werden, sich für die Entwicklung von Kompetenzen in Forschungssoftware einzusetzen. 
+RSE-Champions können diese Geschichten organisieren und Stories von den \glqq{}Stars der Geschichte\grqq{}\ erzählen, die ihre Erfahrungen mit der Forschungssoftware teilen.
+
+\paragraph{Tu Gutes und rede darüber!} Durch die Nutzung von Social Media können \glqq{}RSE Geschichten\grqq{}\ auch einer breiten Öffentlichkeit und der Forschungscommunity zugänglich gemacht werden. 
+Die Zielgruppe für diese Geschichten sind nicht nur Forschende und Entscheidende, sondern auch Nachwuchswissenschaftler:innen, 
+die durch diese Geschichten inspiriert werden können, sich für RSEng-Themen zu interessieren.
+
+\subsubsection{Interessenverbände}
+\paragraph{Kreiert zentrale Ressourcen!} Sowohl für gut vernetzte als auch nicht-vernetzte Akteure bietet eine Übersicht über Ressourcen, Netzwerke, oder Materialien Mehrwert. 
+Sinnvoll wäre etwa die Erstellung einer zentralen Website mit Erfolgsbeispielen (z.B. Sammlung von Policies oder Forschungssoftware) von RSE-Netzwerken. 
+
+\subsubsection{Wissenschaftliche Führungskräfte}
+\paragraph{Vernetzt euch und eure Mitarbeitenden!}  Führungskräfte verfügen häufig über institutionelles Wissen zu vorhandenen Angeboten 
+oder die Existenz von Expert:innen in digitalen Kompetenzen an ihrer Einrichtung. 
+Dies sollten sie nutzen, um als Mentor:innen ihre Mitarbeitenden in Netzwerke einzubinden, vorhandene Services zu bewerben und als Multiplikator:innen für digitale Forschungskompetenzen zu wirken. 
+Führungskräfte können zudem gezielt Champions für digitale Methoden und Forschungssoftware innerhalb ihres Teams identifizieren und fördern. 
+Wenn Führungskräfte nicht über die entsprechenden Netzwerke verfügen, gilt es, vorhandene Netzwerke zu identifizieren.
+
+\subsubsection{Wissenschaftliche Infrastruktur}
+\paragraph{Verhelft RSE-Storys zu mehr Reichweite!} Kommunikationsteams können \glqq{}RSE-Geschichten\grqq{}\ oder \glqq{}Case Studies\grqq{}\ von Entwickler:innen von Forschungssoftware unterstützen,
+indem sie sie auf Social Media und anderen Plattformen teilen oder in Form von Pressemitteilungen verbreiten. 
+Darüber hinaus kann ein neues RSEng-Journal gegründet werden, um Erfolgs- und Schreckensgeschichten (äquivalent zu Data Scarytales\footnote{Siehe beispielsweise \cite{gerlach_research_2022}.}) in Form von Story-basierten Veröffentlichungen und Repositorien zu veröffentlichen.
+
+\subsubsection{Fördergeber}
+\paragraph{Finanziert RSE-PR!} Durch die Finanzierung von PR-Arbeit, Social-Media-Kampagnen und Content-Produktion können \glqq{}RSE-Geschichten\grqq{}\ oder \glqq{}Case Studys\grqq{}\ effektiv verbreitet werden.
+
+\subsubsection{Zielgruppenübergreifende Maßnahmen}
+
+\paragraph{Identifiziert, fördert, und vernetzt Multiplikator:innen und Champions!} Einrichtungen wie Universitäten, Forschungseinrichtungen, Institute und Arbeitsgruppen sollten gezielt Personen oder Teams benennen, die als zentrale Ansprechstelle fungieren. 
+Hierdurch werden Multiplikator:innen etabliert und ein effektives Netzwerk geschaffen, 
+das sowohl intern als auch extern vernetzt ist. 
+Sie sollten Champions identifizieren und fördern, 
+und Champions und Multiplikator:innen in bestehende Netzwerke integrieren, um die Sichtbarkeit von RSEs nachhaltig zu steigern.
+
+\paragraph{Kreiert klar definierte Einstiegspunkte in die RSE-Community!} Institutionen sollten Einsteiger:innen direkt zu Beginn, beispielsweise ihres ersten Codingprojektes innerhalb der Forschung, explizit ansprechen und personalisierte Unterstützung anbieten: 
+Persönlicher Kontakt durch benannte Ansprechpersonen wie Champions oder Mentoring-Programme können den Einstieg erleichtern.
+
+\subsection{Anreize und Rahmen entwickeln}
+% Allgemeine Einleitung
+Die Entwicklung von Forschungssoftware ist in das Wissenschaftssystem eingebettet und hat damit andere Rahmenbedingungen als die Entwicklung von Software in der Industrie. 
+Hierzu zählen die derzeit noch unzureichend entwickelten Anreize für die Qualitätssicherung von Forschungssoftware und sehr heterogene Forschungssoftwarekompetenzen. 
+Viele Forschende haben Berührungsängste mit Themen wie Softwareentwicklung oder betrachten sich nicht als Teil der Forschungssoftware-Community. 
+Daher müssen die Hürden zum Einstieg minimiert werden. 
+Anreize beispielsweise in Form von neuen Indikatoren für die Einbeziehung von Forschungssoftware in die Forschungsevaluation können die Sichtbarkeit von RSEng-Kompetenzen verbessern und die Qualität von Forschungssoftware fördern.
+
+\subsubsection{Entwickler:innen von Forschungssoftware und deren Netzwerke}
+
+\paragraph{Macht euch mit den Richtlinien vertraut oder fordert sie ein!} An einigen Einrichtungen sind bereits Richtlinien zur Entwicklung und dem Umgang mit Forschungssoftware in Kraft oder in Entwicklung\footnote{Beispielsweise die Muster-Richtlinie "Nachhaltige Forschungssoftware an den Helmholtz-Zentren", siehe \cite{helmholtz-gemeinschaft_muster-richtlinie_2019},
+oder die gemeinsame Richtlinie der Fachgruppe der Gesellschaft für Informatik (GI) und der Gesellschaft für Forschungssoftware (de-RSE e.V.) in \cite{GIdeRSELeitlinie}.}.
+Sie bieten einen Rahmen, innerhalb dessen sich die Entwickler:innen bei ihrer Arbeit bewegen (z.B. hinsichtlich Lizenzen, Anforderungen an Entwicklungspraxis etc.). 
+Daher müssen die Entwickler:innen diese Richtlinie kennen und umsetzen. 
+Wo solche Richtlinien noch nicht existieren, können sie aktiv werden und deren Erarbeitung auf der Grundlage vorhandener Muster initiieren.
+
+\subsubsection{Wissenschaftliche Führungskräfte}
+\paragraph{Wertschätzt Softwarekompetenz!} Digitale Kompetenzen sind essentiell in der wissenschaftlichen Arbeit. Führungskräfte sollten digitale Kompetenzen wertschätzen – nicht nur in Lippenbekenntnissen, sondern auch in Formen, die digital kompetenten Mitarbeitenden im Arbeitsleben zugutekommen. Ähnlich wie bei der Einbeziehung von Forschungssoftwarepublikationen im DFG-Antragsverfahren sollten digitale Kompetenzen auch beispielsweise in Einstellungsverfahren, bei der Evaluation von Mitarbeitenden oder in der Kommunikation im Team hervorgehoben werden.
+
+\paragraph{Fördert eine gesunde Fehlerkultur!} Der Erwerb und die Erweiterung von Softwarekompetenzen sind ein stetiger Prozess, der von Kollaboration profitiert und auch von \textit{trial-and-error} geprägt ist. Um diesen Prozess zu fördern, sollten Führungskräfte eine Fehlerkultur etablieren, in der Mitarbeitende unabhängig von Hierarchieebenen Lernerfahrungen oder Fragen teilen können und auch offen mit Misserfolgen oder Fehlern umgehen können.
+Dabei helfen ein wertfreier und konstruktiver Umgang mit Problemen, eine Lernkultur, die Unwissen als Chance statt Defizit sieht, oder eine Praxis des \glqq{}Fehler Feierns\grqq{}\, in der Fehler als notwendige Lernerfahrung normalisiert und zelebriert werden. Praktiken wie etwa \textit{Code Sharing} oder \textit{Code Peer Review} können gefördert werden.
+
+\paragraph{Seid euch des Ressourcenbedarfs von Softwarekompetenzen bewusst!} Führungskräfte bestimmen maßgeblich die Prioritäten in ihrem Arbeitsumfeld. Ihnen sollte bewusst sein, dass Softwarekompetenzen relevant sind und dass dafür finanzielle und personelle Ressourcen benötigt werden. Dieses sollte in der Personalplanung, bei Projektanträgen, der Zeitplanung von wissenschaftlichen Projekten oder Abschlussarbeiten, sowie bei der Aufstellung von Budgets bedacht werden.
+
+\paragraph{Fordert und fördert die Weiterentwicklung von Softwarekompetenz bei den Mitarbeitenden!} Durch den schnellen technologischen Wandel ändern sich die Anforderungen stetig. Daher endet der Erwerb digitaler Kompetenzen nicht mit dem Abschluss eines Studiums, sondern ist ein beständiger Prozess, für den wegen der oft hohen Arbeitsbelastung in der Wissenschaft häufig nicht genügend Zeit bleibt. 
+Führungskräfte sollten intrinsisch motivierte Mitarbeitende beim Ausbau ihrer digitalen Kompetenzen z.B. durch frei nutzbare Arbeitszeitkontingente fördern, um ihnen Raum für ihre Weiterbildung zu geben. 
+Allerdings sind nicht alle Mitarbeitenden motiviert, sich selbst die notwendige Softwarekompetenz anzueignen. In diesen Fällen sollten Führungskräfte Anforderungen für den Ausbau der digitalen Kompetenzen formulieren und etwa die Teilnahme an bestimmten Schulungen, insbesondere institutionalisierte Schulungen und Fortbildungsprogramme im RSEng-Bereich fordern.
+
+\paragraph{Leistet Lobbyarbeit für Softwarekompetenzen!} Führungskräfte sind ein Bindeglied zwischen Organisationseinheiten im wissenschaftlichen System.
+Die Wichtigkeit von digitalen Kompetenzen sollten sie nicht nur \glqq{}nach unten\grqq{}\ innerhalb ihrer eigenen Mitarbeitenden propagieren, sondern auch \glqq{}nach oben\grqq{}\ Lobbyarbeit leisten -- in der Verhandlung von Stellen oder Budgets, im Review von Projektanträgen, oder im Wirken in wissenschaftlichen Gesellschaften.
+
+\paragraph{Denkt RSE im On- und Offboarding mit!} Für das Onboarding und Offboarding neuer Mitarbeiter:innen sollten Checklisten genutzt oder entwickelt werden, die auch die Aspekte umfassen sollten, die im Zusammenhang mit der Entwicklung und Nutzung von Forschungssoftware stehen, wie etwa Hinweis auf Richtlinien. 
+
+\subsubsection{Fördergeber}
+\paragraph{Unterstützt den Aufbau von Softwarekompetenz in den geförderten Projekten durch entsprechende Ressourcen!} Um die Qualität der in den Projekten entwickelten Forschungssoftware zu sichern, muss es möglich sein, dass auch Ressourcen für die Weiterbildung der Projektmitarbeiter:innen beantragt werden können, um die notwendigen digitalen Kompetenzen im Projekt zu verankern.
+Dies kann von Kursen für einzelne Entwickler:innen für erforderliche spezielle Softwarekompetenzen bis hin zu allgemeineren digitalen Kompetenzen für das ganze Projekt reichen, um eine gemeinsame Basis für die Arbeit im Projekt zu haben.
+
+\paragraph{Stellt sicher, dass genügend Softwarekompetenz im Review vorhanden ist! } Auch im Begutachtungsprozess muss stärker verankert werden, dass die Entwicklung digitaler Kompetenzen in der Projektarbeit Raum hat.
+Dafür muss gesichert werden, dass entsprechende Expert:innen für das Thema im Gremium vorhanden sind.
+
+\subsubsection{Einrichtungsleitungen}
+\paragraph{Schafft Karrierewege und Perspektiven für Forschende mit RSEng-Kompetenzen!} Entwickelt inklusive Lebenslauf-Muster, die die Diversität von Research-Outputs (inklusive Daten- und Softwarepublikationen) anerkennen.
+
+\subsubsection{Zielgruppenübergreifende Aufgaben}
+\paragraph{Erhöht die subjektive Anziehungskraft!} Um Forschungssoftwarekompetenzen attraktiver für Nachwuchsforscher:innen, institutionelle Entscheider:innen, und \glqq{}schlafende\grqq{}\ RSEs zu machen, können wissenschaftliche Infrastruktur, Fördergeber, Interessenvertretungen oder Entwickler:innen von Forschungssoftware attraktive Formulierungen (z.B. \glqq{}Researchers Who Code\grqq{}) benutzen,  Events organisieren, Personen mit Anziehungskraft einbinden, oder Erfolgsgeschichten aus der Community teilen (siehe \ref{rse-community}).
+
+\paragraph{Erhöht die objektive Anziehungskraft!} Führt Preise und Badges ein, um (Spitzen-)Leistung zu fördern und zu honorieren.
+Entwickelt Mentoring-Programme und Aktivitätspläne, um RSE Champions einzubinden, und ihnen Anerkennung durch Preise, Förderungen oder öffentliche Plattformen verschaffen. 
+Für die Finanzierung dieser Initiativen können institutionelle Mittel für Preise oder Mentoring-Programme genutzt werden. 
+Zudem stehen individuelle Förderprogramme von Forschungsorganisationen wie der VW-Stiftung, DFG- oder EU-Projekten zur Verfügung.
+
+\paragraph{Nutzt RSEng-Kompetenzen als Evaluationsbestandteil!}
+Zur Verbesserung der Rahmenbedingungen gehört auch die Einbeziehungen von Forschungssoftware in das Research Assessment (z.B. bei Evaluationen). 
+Aber auch bei Personaleinstellungen, Beförderungen, oder internen Anreizsystemen z.B. in Form von Boni für Teams, die RSEs effektiv einbinden, können gezielt Impulse gesetzt werden, um Forschungssoftwarekompetenzen sichtbar zu machen. 
+Die quantitativen und qualitativen Key Performance Indicators (KPI) und Evaluationsmechanismen sollten dabei explizit gemacht und veröffentlicht werden.
+
+\paragraph{Entwickelt, implementiert, und teilt Policies!} Policies zur Unterstützung der Forschungssoftwarekompetenzen sind notwendig, da moderne Forschung zunehmend auf Software angewiesen ist. 
+Sie fördern Standards, ermöglichen nachhaltige Karriereperspektiven und sichern die Qualität sowie Reproduzierbarkeit wissenschaftlicher Ergebnisse. 
+In enger Zusammenarbeit mit RSEs und anderen relevanten Communities sollten Arbeitsgruppen, Universitäten, Forschungseinrichtungen, oder Forschungsverbünde Richt- und Leitlinien oder Checklisten für RSEng-Kompetenzen entwickeln, implementieren, und zur Nachnutzung intern und extern veröffentlichen. 
+Dies umfasst beispielsweise die Definition von RSE-Rollen und Verantwortlichkeiten in der Code-Arbeit, die klare Festlegung von Verantwortlichkeiten für Forschungssoftware in Projekten und Arbeitsgruppen und die Nennung von Ressourcen. 
+Dazu können entweder bereits existierende Forschungssoftware-Policies genutzt werden, 
+oder neue institutionelle Forschungssoftware-Policies erstellt (bzw. existierende Open-Science-/Forschungsdaten-Policies ergänzt) und darauf aufbauende konkrete Handlungsempfehlungen in einer Leitlinie oder Richtlinie verfasst werden. 
+Die resultierenden Policies sollten regelmäßig evaluiert und aktualisiert werden.
+
+\paragraph{Richtet zentrale Anlaufstellen für Software-Policies ein!} mit Ansprechpersonen für Fragen zu Software-Policies. Die Implementierung einer Forschungssoftwarepolicy sollte von lokalen Unterstützungsangeboten zur Umsetzung dieser Policy begleitet werden. Fehlen solche niederschwelligen Angebote, besteht die Gefahr, dass Forschende die Inhalte nicht wirklich in ihre Arbeitsweise integrieren, sondern diese nur \textit{pro forma} erfüllen.
+
+\section{Zusammenfassung und Ausblick}
+
+%Kapitel 1 in kurz
+Digitale Kompetenzen im Allgemeinen und Forschungssoftwarekompetenzen im Speziellen werden in der modernen Wissenschaft immer relevanter.
+Insbesondere mit dem eigenen Anspruch an die gute wissenschaftliche Praxis und damit einhergehende Reproduzierbarkeit von softwareunterstützter Forschung.
+
+%Kapitel 2 in kurz
+Daher haben bereits viele verschiedene Organisationen 
+für sich festgestellt, 
+dass in der Fortbildung und Unterstützung von Wissenschaftler:innen Handlungsbedarf besteht.
+Die Impulsvorträge haben zum einen die Diversität der handelnden Organisationen gezeigt und zum anderen einen Überblick über Maßnahmen und Angebote gegeben, 
+die bereits jetzt umgesetzt werden und von weiteren Organisationen umgesetzt werden können. 
+
+% Kapitel 3 in kurz
+Die hier formulierten Handlungsempfehlungen wurden von einer interdisziplinären und diversen Gruppe von Menschen aus unterschiedlichen Bereichen und Hierarchieebenen im deutschen wissenschaftlichen System entwickelt. 
+Damit konnten wir die vielschichtige Fragestellung nach der Förderung von Forschungssoftwarekompetenzen aus zahlreichen Blickwinkeln betrachten.
+Unsere Handlungsempfehlungen bieten konkrete Ansatzpunkte für eine große Zahl von Zielgruppen - vom einzelnen RSE bis hin zum Förderer sollten Akteure darin konkrete Maßnahmen finden, die sie unmittelbar oder langfristig umsetzen können.
+
+Zugleich erheben wir keinen Anspruch auf Vollständigkeit: Das Feld Forschungssoftware ist im beständigen Wandel, und so werden sich auch Handlungsempfehlungen über die Zeit verändern müssen. 
+In diesem Sinne ist dieses Dokument versioniert, sodass es zukünftigen Anforderungen angepasst werden kann.
+
+Ebenso wie die Diskussion selbst sind auch die Förderung von Forschungssoftware und Forschungssoftwarekompetenzen beständige Prozesse.
+Dementsprechend werden manche der Handlungsempfehlungen bereits kurzfristige Erfolge bieten, während andere auf langfristigere Veränderungen hinauslaufen. 
+Daher sollte diese Langfristigkeit und Nachhaltigkeit bei der Umsetzung der Handlungsempfehlungen beachtet werden.
+
+% sollten wir im Ausblick vielleicht auch auf die Herausforderungen bzgl der FoSWKompetenzen duch verstärkten Einsatz von KI/AI zumindest kurz eingehen. ICh sehe zumindest schon recht negative Tendenzen, dass Doktoranden gesagt wird, es sei ja gar nicht mehr so wichtig, selbst zu programmieren, weil das COpilot u.a. für einen machen kann und sie sich mehr auf die wissenschaftliche Fragestellung konzentrieren sollen. 
+Wie in der Einleitung beschrieben, empfinden wir die hier aufgeschriebenen Impulse
+und Handlungsempfehlungen als Debattenbeitrag innerhalb einer größeren Diskussion. 
+Diese erste Version zeigt das Ergebnis der Diskussion zwischen den Teilnehmer:innen des Workshops in Hannover
+und soll eine Diskussionsgrundlage für weitere Diskussionen 
+in den einzelnen Fachbereichen der Teilnehmer:innen sein. \\
+
+Dementsprechend geben wir als Ausblick auch eine finale Handlungsempfehlung:\\
+
+\textbf{Nehmt aktiv an Diskussion und Austausch teil!} 
+Insbesondere haben wir im Plenum mit den anderen Workshops im Rahmen der Themenwoche festgestellt,
+dass sowohl eine breite Diskussion über fächerübergreifende Grundlagen und Gemeinsamkeiten
+als auch fachspezifische Bedarfe im Bereich digitaler Kompetenzen nötig sind.
+
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{references.bib}
+
+\end{document}
